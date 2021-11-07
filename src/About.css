@@ -1,0 +1,45 @@
+.text,
+.image {
+  z-index: 100;
+}
+
+.row {
+  margin-top: 10%;
+  justify-content: center;
+}
+
+.image {
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 52px;
+  font-weight: 600;
+}
+
+/* table {
+  margin: 0 10%;
+  text-align: right;
+  margin-top: 100px;
+  position: relative;
+  z-index: 100;
+}
+
+td {
+  width: 25%;
+} */
+
+p {
+  color: white;
+}
+
+.heading {
+  text-align: left;
+}
+
+@media (max-width: 992px) {
+  img {
+    width: 75%;
+  }
+}

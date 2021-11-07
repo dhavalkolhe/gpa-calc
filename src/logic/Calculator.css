@@ -1,0 +1,12 @@
+input {
+  /* width: max-content; */
+  width: 150px;
+  background: rgba(160, 160, 160, 0.64);
+  border-radius: 7px;
+  border: none;
+  color: white;
+}
+
+select {
+  margin-right: 9px;
+}

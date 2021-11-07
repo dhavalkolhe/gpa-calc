@@ -1,0 +1,15 @@
+.Main {
+  /* background: linear-gradient(to top left, grey, white);
+  opacity: 0.7; */
+  background: linear-gradient(
+    110.02deg,
+    rgba(255, 255, 255, 0.4) 3.43%,
+    rgba(205, 205, 205, 0.1) 98.91%
+  );
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(40px);
+  margin: 15% 15%;
+  padding: 3% 5%;
+  border-radius: 20px;
+}
+
