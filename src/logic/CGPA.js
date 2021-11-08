@@ -18,6 +18,7 @@ const Cgpa = () => {
         <label>Credits</label>
         <label>Marks</label>
         <br />
+        <br />
         <label>Sem-1</label>
         <input
           type="number"
