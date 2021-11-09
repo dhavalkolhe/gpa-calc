@@ -55,9 +55,11 @@ const Calculator = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>{list1}</div>
         <br />
+        <br />
         {sub > 0 && <button type="Submit">Calculate</button>}
       </form>
-      {total !== 0 && <h1>GPA : {total}</h1>}
+      <br />
+      {total !== 0 && <p className="answer">GPA: {total}</p>}
     </div>
   );
 };

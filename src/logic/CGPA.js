@@ -15,11 +15,8 @@ const Cgpa = () => {
   return (
     <div className="CGPA">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>Credits</label>
-        <label>Marks</label>
-        <br />
-        <br />
         <label>Sem-1</label>
+        <br />
         <input
           type="number"
           {...register("sem1-credits")}
@@ -33,7 +30,9 @@ const Cgpa = () => {
           defaultValue={0}
         />
         <br />
+        <br />
         <label>Sem-2</label>
+        <br />
         <input
           type="number"
           {...register("sem2-credits")}
@@ -47,7 +46,9 @@ const Cgpa = () => {
           defaultValue={0}
         />
         <br />
+        <br />
         <label>Sem-3</label>
+        <br />
         <input
           type="number"
           {...register("sem3-credits")}
@@ -61,7 +62,9 @@ const Cgpa = () => {
           defaultValue={0}
         />
         <br />
+        <br />
         <label>Sem-4</label>
+        <br />
         <input
           type="number"
           {...register("sem4-credits")}
@@ -75,7 +78,9 @@ const Cgpa = () => {
           defaultValue={0}
         />
         <br />
+        <br />
         <label>Sem-5</label>
+        <br />
         <input
           type="number"
           {...register("sem5-credits")}
@@ -89,7 +94,9 @@ const Cgpa = () => {
           defaultValue={0}
         />
         <br />
+        <br />
         <label>Sem-6</label>
+        <br />
         <input
           type="number"
           {...register("sem6-credits")}
@@ -103,7 +110,9 @@ const Cgpa = () => {
           defaultValue={0}
         />
         <br />
+        <br />
         <label>Sem-7</label>
+        <br />
         <input
           type="number"
           {...register("sem7-credits")}
@@ -117,7 +126,9 @@ const Cgpa = () => {
           defaultValue={0}
         />
         <br />
+        <br />
         <label>Sem-8</label>
+        <br />
         <input
           type="number"
           {...register("sem8-credits")}
@@ -130,6 +141,8 @@ const Cgpa = () => {
           name="sem8-marks"
           defaultValue={0}
         />
+        <br />
+        <br />
         <br />
         <button type="submit">Submit</button>
       </form>
