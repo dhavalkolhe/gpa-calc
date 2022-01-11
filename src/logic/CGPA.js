@@ -1,20 +1,61 @@
+// import { SmokeFreeSharp } from "@mui/icons-material";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 const Cgpa = () => {
+  const [semesters, setSemesters] = useState(0);
+  const semesterList = [];
   const { register, handleSubmit } = useForm();
   let [total, setTotal] = useState(0);
   const onSubmit = (data) => {
+    console.log(data);
     let credits = 0;
     let gpa = 0;
-    for (var i = 1; i <= 8; i++) {
-      credits += parseInt(data[`sem${i}-credits`]);
-      gpa += parseInt(data[`sem${i}-marks`] * data[`sem${i}-credits`]);
+    for (let i = 1; i <= semesters; i++) {
+      credits += parseFloat(data[`sem${i}-credits`]);
+      gpa += parseFloat(data[`sem${i}-marks`] * data[`sem${i}-credits`]);
     }
-    setTotal(gpa / credits);
+    setTotal((gpa / credits).toFixed(2));
   };
+
+  // generate inputs for number of semesters
+  for (let i = 0; i < semesters; i++) {
+    semesterList.push(
+      <div key={i}>
+        <label htmlFor="">Semester {i + 1}: </label>
+        <br />
+        <input
+          type="number"
+          step="0.5"
+          {...register(`sem${i+1}-credits`)}
+          name={`sem${i+1}-credits`}
+          defaultValue={0}
+          placeholder="Total Credits"
+        />
+        <input
+          type="number"
+          {...register(`sem${i}-marks`)}
+          name={`sem${i+1}-marks`}
+          placeholder="GPA"
+          defaultValue={0}
+          step="0.01"
+        />
+      </div>
+    )
+  }
   return (
     <div className="CGPA">
+      <form>
+        <h6>Semester Count: </h6>
+        <input type="number" onChange={(e) => setSemesters(e.target.value)} />
+      </form>
       <form onSubmit={handleSubmit(onSubmit)}>
+        <div>{semesterList}</div>
+        <br />
+        <br />
+        {semesters > 0 && <button type="Submit">Calculate</button>}
+      </form>
+      {total !== 0 && <p className="answer">CGPA: {total}</p>}
+      {/* <form onSubmit={handleSubmit(onSubmit)}>
         <label>Sem-1</label>
         <br />
         <input
@@ -145,8 +186,8 @@ const Cgpa = () => {
         <br />
         <br />
         <button type="submit">Submit</button>
-      </form>
-      {total !== 0 && <h1>{total}</h1>}
+      </form> */}
+      {/* {total !== 0 && <h1>{total}</h1>} */}
     </div>
   );
 };

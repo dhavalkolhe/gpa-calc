@@ -11,10 +11,10 @@ const Calculator = () => {
     let credits = 0;
     let gpa = 0;
     for (i = 0; i < sub; i++) {
-      credits += parseInt(data[`credits-${i}`]);
-      gpa += parseInt(data[`credits-${i}`] * data[`grades-${i}`]);
+      credits += parseFloat(data[`credits-${i}`]);
+      gpa += parseFloat(data[`credits-${i}`] * data[`grades-${i}`]);
     }
-    setTotal(gpa / credits);
+    setTotal((gpa / credits).toFixed(2));
   };
   for (var i = 0; i < sub; i++) {
     list1.push(
@@ -25,6 +25,7 @@ const Calculator = () => {
         <select name="credits" {...register(`credits-${i}`)}>
           <option value="0">Credits</option>
           <option value="1">1</option>
+          <option value="1.5">1.5</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
