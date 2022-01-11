@@ -6,15 +6,26 @@ const Cgpa = () => {
   const semesterList = [];
   const { register, handleSubmit } = useForm();
   let [total, setTotal] = useState(0);
-  const onSubmit = (data) => {
-    console.log(data);
-    let credits = 0;
-    let gpa = 0;
-    for (let i = 1; i <= semesters; i++) {
-      credits += parseFloat(data[`sem${i}-credits`]);
-      gpa += parseFloat(data[`sem${i}-marks`] * data[`sem${i}-credits`]);
+  function isEmpty(obj) {
+    let countEmptyFields = 0;
+    for (const [key, value] of Object.entries(obj)) {
+      if (value === "") countEmptyFields++;
     }
-    setTotal((gpa / credits).toFixed(2));
+    return countEmptyFields > 0;
+  }
+  const onSubmit = (data) => {
+    const isFormDataEmpty = isEmpty(data);
+    if (!isFormDataEmpty) {
+      let credits = 0;
+      let gpa = 0;
+      for (let i = 1; i <= semesters; i++) {
+        credits += parseFloat(data[`sem${i}-credits`]);
+        gpa += parseFloat(data[`sem${i}-marks`] * data[`sem${i}-credits`]);
+      }
+      setTotal((gpa / credits).toFixed(2));
+    } else {
+      setTotal("Please fill in all the fields or select only required number of semesters");
+    }
   };
 
   // generate inputs for number of semesters
@@ -28,15 +39,13 @@ const Cgpa = () => {
           step="0.5"
           {...register(`sem${i+1}-credits`)}
           name={`sem${i+1}-credits`}
-          defaultValue={0}
           placeholder="Total Credits"
         />
         <input
           type="number"
-          {...register(`sem${i}-marks`)}
+          {...register(`sem${i+1}-marks`)}
           name={`sem${i+1}-marks`}
           placeholder="GPA"
-          defaultValue={0}
           step="0.01"
         />
       </div>
@@ -54,7 +63,8 @@ const Cgpa = () => {
         <br />
         {semesters > 0 && <button type="Submit">Calculate</button>}
       </form>
-      {total !== 0 && <p className="answer">CGPA: {total}</p>}
+      <br/>
+      {total !== 0 && <h1 className="answer">{total.length > 5 ? `${total}` : `CGPA: ${total}`}</h1>}
       {/* <form onSubmit={handleSubmit(onSubmit)}>
         <label>Sem-1</label>
         <br />

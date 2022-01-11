@@ -6,6 +6,8 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Calculator from "./logic/Calculator";
 import Cgpa from "./logic/CGPA";
+import FatPassingMarks from "./logic/FatPassingMarks";
+import './Main.css';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -55,8 +57,9 @@ export default function BasicTabs() {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="Calculate GPA" {...a11yProps(0)} />
-          <Tab label="Calculate CGPA" {...a11yProps(1)} />
+          <Tab className="feature-label" label="Calculate GPA" {...a11yProps(0)} />
+          <Tab className="feature-label" label="Calculate CGPA" {...a11yProps(1)} />
+          <Tab className="feature-label" label="FAT Passing Marks" {...a11yProps(1)} />
           {/* <Tab label="Item Three" {...a11yProps(2)} /> */}
         </Tabs>
       </Box>
@@ -65,6 +68,9 @@ export default function BasicTabs() {
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Cgpa />
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <FatPassingMarks />
       </TabPanel>
       {/* <TabPanel value={value} index={2}>
         Item Three

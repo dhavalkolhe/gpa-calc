@@ -23,7 +23,7 @@ const Calculator = () => {
         Subject {i + 1}
         <br />
         <select name="credits" {...register(`credits-${i}`)}>
-          <option value="0">Credits</option>
+          c
           <option value="1">1</option>
           <option value="1.5">1.5</option>
           <option value="2">2</option>
