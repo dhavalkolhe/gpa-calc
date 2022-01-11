@@ -23,7 +23,29 @@ const FatPassingMarks = () => {
     const [labPassingMarksMessage, setLabPassingMarksMessage] = useState('');
 
     const componentSelectHandler = (event) => {
-        setSubjectComponent(event.target.value);
+        setSubjectComponent(prevState => {
+            if (prevState === 'Theory') {
+                setTheoryMarksFormData({
+                    'cat-1-marks': 0,
+                    'cat-2-marks': 0,
+                    'internal-1-marks': 0,
+                    'internal-2-marks': 0,
+                    'internal-3-marks': 0,
+                });
+                setTheoryPassingMarksMessage('');
+            } else if (prevState === 'Lab') {
+                setLabMarksFormData({
+                    'lab-1': 0,
+                    'lab-2': 0,
+                    'lab-3': 0,
+                    'lab-4': 0,
+                    'lab-5': 0,
+                    'lab-6': 0,
+                });
+                setLabPassingMarksMessage('');
+            }
+            return event.target.value;
+        });
     };
 
     const onMarksValueChangeHandler = (event) => {
@@ -87,7 +109,7 @@ const FatPassingMarks = () => {
                   'You have fulfilled the criteria of passing the Lab Component'
               )
             : setLabPassingMarksMessage(
-                  `You just need ${50 - totalLabAssessmentsMarks} out of 40 in LAB FAT to pass Lab Component`
+                  `You just need ${50 - totalLabAssessmentsMarks} marks out of 40 in LAB FAT to pass Lab Component`
               );
     };
     return (
