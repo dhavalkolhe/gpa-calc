@@ -87,11 +87,14 @@ const FatPassingMarks = () => {
             Number(internalTotalMarks);
         console.log(totalMarks);
 
-        totalMarks > 40
-            ? setTheoryPassingMarksMessage(
-                  'You need 40 marks out of 100 in FAT to pass theory component'
-              )
-            : setTheoryPassingMarksMessage('');
+        if (totalMarks > 34) {
+            setTheoryPassingMarksMessage('You need 40 marks out of 100 in FAT to pass theory component');
+        } else {
+            const neededPassingMArks = 50 - (totalMarks + 16);
+            const passsingPercentageOutOfForty = Number(parseFloat((neededPassingMArks * 100) / 40).toFixed(2));
+            const finalPassingMarks = 40 + passsingPercentageOutOfForty;
+            setTheoryPassingMarksMessage(`You need ${finalPassingMarks} marks out of 100 in FAT to pass theory component`);
+        }
     };
 
     const onLabMarksFormSubmitHandler = (event) => {

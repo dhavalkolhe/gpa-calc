@@ -8,7 +8,7 @@ const Cgpa = () => {
   let [total, setTotal] = useState(0);
   function isEmpty(obj) {
     let countEmptyFields = 0;
-    for (const [key, value] of Object.entries(obj)) {
+    for (const [, value] of Object.entries(obj)) {
       if (value === "") countEmptyFields++;
     }
     return countEmptyFields > 0;
