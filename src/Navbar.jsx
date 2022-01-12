@@ -26,7 +26,7 @@ function Navbar() {
               <a
                 className="nav-link"
                 aria-current="page"
-                href="https://vitrendz.com/"
+                href="https://community.vitrendz.com/"
               >
                 Community
               </a>
@@ -42,7 +42,7 @@ function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="https://vitrendz.com/">
+              <a className="nav-link" href="https://resources.vitrendz.com/">
                 Others
               </a>
             </li>

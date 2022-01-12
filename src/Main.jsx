@@ -55,7 +55,10 @@ export default function BasicTabs() {
         <Tabs
           value={value}
           onChange={handleChange}
-          aria-label="basic tabs example"
+          aria-label="scrollable auto tabs example"
+          // className="tabs-panel"
+          variant="scrollable"
+          scrollButtons="auto"
         >
           <Tab className="feature-label" label="Calculate GPA" {...a11yProps(0)} />
           <Tab className="feature-label" label="Calculate CGPA" {...a11yProps(1)} />

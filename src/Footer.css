@@ -35,6 +35,7 @@ a {
 }
 
 .icons i {
+  color: #fff;
   margin-right: 30px;
 }
 
@@ -42,6 +43,13 @@ a {
   text-align: center;
   color: white;
   padding: 1px;
+}
+
+.footer-links {
+  display: block;
+  color: rgb(197, 197, 197);
+  margin: 0.25rem 0;
+  padding: 0.5em 0;
 }
 
 @media (max-width: 992px) {

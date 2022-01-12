@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 
 const FatPassingMarks = () => {
+    // choosing calculator for theory or lab
     const [subjectComponent, setSubjectComponent] = useState('Theory');
+    // initial state for theory marks
     const [theoryMarksFormData, setTheoryMarksFormData] = useState({
         'cat-1-marks': 0,
         'cat-2-marks': 0,
@@ -9,6 +11,7 @@ const FatPassingMarks = () => {
         'internal-2-marks': 0,
         'internal-3-marks': 0,
     });
+    // initial state for lab marks
     const [labMarksFormData, setLabMarksFormData] = useState({
         'lab-1': 0,
         'lab-2': 0,
@@ -18,12 +21,15 @@ const FatPassingMarks = () => {
         'lab-6': 0,
     });
 
+    // message for required marks in theory fat
     const [theoryPassingMarksMessage, setTheoryPassingMarksMessage] =
         useState('');
+    // message for required marks in lab fat
     const [labPassingMarksMessage, setLabPassingMarksMessage] = useState('');
 
+    //function that sets the state as theory or lab to display theory or lab form based on option selected
     const componentSelectHandler = (event) => {
-        setSubjectComponent(prevState => {
+        setSubjectComponent((prevState) => {
             if (prevState === 'Theory') {
                 setTheoryMarksFormData({
                     'cat-1-marks': 0,
@@ -48,6 +54,7 @@ const FatPassingMarks = () => {
         });
     };
 
+    // function to update the theory marks data on input value change
     const onMarksValueChangeHandler = (event) => {
         setTheoryMarksFormData((prevData) => {
             return {
@@ -57,6 +64,7 @@ const FatPassingMarks = () => {
         });
     };
 
+    // function to update the lab marks data on input value change
     const onLabMarksChangeHandler = (event) => {
         setLabMarksFormData((prevData) => {
             return {
@@ -66,39 +74,64 @@ const FatPassingMarks = () => {
         });
     };
 
+    // function to calculate the required theory marks for passing the subject on form submit
     const onTheoryMarksFormSubmitHandler = (event) => {
         event.preventDefault();
+        // extracting marks in cat 1
         const catOneMarks = parseFloat(
             theoryMarksFormData['cat-1-marks'] / 2
         ).toFixed(2);
+        // extracting marks in cat 2
         const catTwoMarks = parseFloat(
             theoryMarksFormData['cat-2-marks'] / 2
         ).toFixed(2);
+        // extracting and calculating total marks in da/quiz
         const internalTotalMarks = parseFloat(
             Number(theoryMarksFormData['internal-1-marks']) +
                 Number(theoryMarksFormData['internal-2-marks']) +
                 Number(theoryMarksFormData['internal-3-marks'])
         ).toFixed(2);
 
-        console.log(catOneMarks, catTwoMarks, internalTotalMarks);
+        // calculating total internal marks out of 60
         const totalMarks =
             Number(catOneMarks) +
             Number(catTwoMarks) +
             Number(internalTotalMarks);
-        console.log(totalMarks);
 
-        if (totalMarks > 34) {
-            setTheoryPassingMarksMessage('You need 40 marks out of 100 in FAT to pass theory component');
-        } else {
-            const neededPassingMArks = 50 - (totalMarks + 16);
-            const passsingPercentageOutOfForty = Number(parseFloat((neededPassingMArks * 100) / 40).toFixed(2));
-            const finalPassingMarks = 40 + passsingPercentageOutOfForty;
-            setTheoryPassingMarksMessage(`You need ${finalPassingMarks} marks out of 100 in FAT to pass theory component`);
+        // if total internal marks is less than 10, then student cannot pass the subject
+        if (totalMarks < 10) {
+            setTheoryPassingMarksMessage(
+                'Sorry! You cannot pass theory component of this subject..'
+            );
+        }
+        // if total internal marks are greater than 50, then student only
+        if (totalMarks >= 50) {
+            setTheoryPassingMarksMessage(
+                'You need 40 marks out of 100 in FAT to pass theory component'
+            );
+        }
+        // if total internal marks are less than 50, then dooing the calculation for marks needed in fat
+        else if (totalMarks < 50 && totalMarks >= 10) {
+            // calculating the marks needed
+            const neededPassingMarks = (50 - totalMarks) * 2.5;
+            // if marks needed are less than 40, then also we need minimum 40 marks in theory fat
+            if (neededPassingMarks < 40)
+                setTheoryPassingMarksMessage(
+                    'You need 40 marks out of 100 in FAT to pass theory component'
+                );
+            // display the marks needed for passing in theory fat
+            else {
+                setTheoryPassingMarksMessage(
+                    `You need ${neededPassingMarks} marks out of 100 in FAT to pass theory component`
+                );
+            }
         }
     };
 
+    // function to calculate the required lab marks for passing the subject on form submit
     const onLabMarksFormSubmitHandler = (event) => {
         event.preventDefault();
+        // calculating total internal assessment marks of lab out of 60
         const totalLabAssessmentsMarks = parseFloat(
             Number(labMarksFormData['lab-1']) +
                 Number(labMarksFormData['lab-2']) +
@@ -107,13 +140,24 @@ const FatPassingMarks = () => {
                 Number(labMarksFormData['lab-5']) +
                 Number(labMarksFormData['lab-6'])
         ).toFixed(2);
+
+        // if total internal marks > 50, pass, otherwise show required marks
         totalLabAssessmentsMarks > 50
             ? setLabPassingMarksMessage(
                   'You have fulfilled the criteria of passing the Lab Component'
               )
             : setLabPassingMarksMessage(
-                  `You just need ${50 - totalLabAssessmentsMarks} marks out of 40 in LAB FAT to pass Lab Component`
+                  `You just need ${
+                      50 - totalLabAssessmentsMarks
+                  } marks out of 40 in LAB FAT to pass Lab Component`
               );
+
+        // if total internal marks less than 10, then student cannot pass the subject, no matter what!! 
+        if (totalLabAssessmentsMarks < 10) {
+            setLabPassingMarksMessage(
+                'Sorry! You cannot pass lab component this subject..'
+            );
+        }
     };
     return (
         <div>

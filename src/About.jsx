@@ -6,7 +6,7 @@ function About() {
   return (
     <div className="row mx-auto">
       <div className="col-lg-5">
-        <h1>About GPA Calculator</h1>
+        <h1 className="main-heading">About GPA Calculator</h1>
         <br />
         <p>
           lorem ipsum cnzjdncjlznjfncljka cznl vcjl zvzlnvlj jnn jlz jlzn jlz z

@@ -1,3 +1,7 @@
 .feature-label {
     color: #fff !important;
 }
+
+.tabs-panel {
+    overflow-x: scroll !important;
+}

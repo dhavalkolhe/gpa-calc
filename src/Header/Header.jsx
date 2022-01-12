@@ -76,7 +76,7 @@ export default function Header() {
         <div className="navbar__right">
           <a
             className="navbar__link nav__item"
-            href="https://groups.vitrendz.com"
+            href="https://community.vitrendz.com/"
           >
             Community
           </a>
