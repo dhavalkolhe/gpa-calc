@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
+import betaTumse from '../assets/beta-tumse.jpg';
+import youCanDoIt from '../assets/you-can-do-it.jpg';
+import highRisk from '../assets/high-risk.jpg';
+import buddhiTez from '../assets/buddhi-tez.jpg';
 
 const FatPassingMarks = () => {
+    // meme image link state
+    const [memeImage, setMemeImage] = useState('');
     // choosing calculator for theory or lab
     const [subjectComponent, setSubjectComponent] = useState('Theory');
     // initial state for theory marks
@@ -39,6 +45,7 @@ const FatPassingMarks = () => {
                     'internal-3-marks': 0,
                 });
                 setTheoryPassingMarksMessage('');
+                setMemeImage('');
             } else if (prevState === 'Lab') {
                 setLabMarksFormData({
                     'lab-1': 0,
@@ -49,6 +56,7 @@ const FatPassingMarks = () => {
                     'lab-6': 0,
                 });
                 setLabPassingMarksMessage('');
+                setMemeImage('');
             }
             return event.target.value;
         });
@@ -101,29 +109,33 @@ const FatPassingMarks = () => {
         // if total internal marks is less than 10, then student cannot pass the subject
         if (totalMarks < 10) {
             setTheoryPassingMarksMessage(
-                'Sorry! You cannot pass theory component of this subject..'
+                '😭 Sorry! You cannot pass theory component of this subject...keep 6k ready 😜'
             );
+            setMemeImage((prevMeme) => betaTumse);
         }
         // if total internal marks are greater than 50, then student only
         if (totalMarks >= 50) {
             setTheoryPassingMarksMessage(
-                'You need 40 marks out of 100 in FAT to pass theory component'
+                'You need only 40 marks out of 100 in FAT to pass theory component 🥳'
             );
+            setMemeImage((prevMeme) => youCanDoIt);
         }
         // if total internal marks are less than 50, then dooing the calculation for marks needed in fat
         else if (totalMarks < 50 && totalMarks >= 10) {
             // calculating the marks needed
             const neededPassingMarks = (50 - totalMarks) * 2.5;
             // if marks needed are less than 40, then also we need minimum 40 marks in theory fat
-            if (neededPassingMarks < 40)
+            if (neededPassingMarks < 40) {
                 setTheoryPassingMarksMessage(
-                    'You need 40 marks out of 100 in FAT to pass theory component'
+                    'You need only 40 marks out of 100 in FAT to pass theory component 🥳'
                 );
-            // display the marks needed for passing in theory fat
+                setMemeImage((prevMeme) => youCanDoIt);
+            } // display the marks needed for passing in theory fat
             else {
                 setTheoryPassingMarksMessage(
-                    `You need ${neededPassingMarks} marks out of 100 in FAT to pass theory component`
+                    `You need ${neededPassingMarks} marks out of 100 in FAT to pass theory component 😟`
                 );
+                setMemeImage((prevMeme) => highRisk);
             }
         }
     };
@@ -142,21 +154,27 @@ const FatPassingMarks = () => {
         ).toFixed(2);
 
         // if total internal marks > 50, pass, otherwise show required marks
-        totalLabAssessmentsMarks > 50
-            ? setLabPassingMarksMessage(
-                  'You have fulfilled the criteria of passing the Lab Component'
-              )
-            : setLabPassingMarksMessage(
-                  `You just need ${
-                      50 - totalLabAssessmentsMarks
-                  } marks out of 40 in LAB FAT to pass Lab Component`
-              );
 
-        // if total internal marks less than 10, then student cannot pass the subject, no matter what!! 
+        if (totalLabAssessmentsMarks > 50) {
+            setLabPassingMarksMessage(
+                'You have fulfilled the criteria of passing the Lab Component 🥳'
+            );
+            setMemeImage((prevMeme) => buddhiTez);
+        } else {
+            setLabPassingMarksMessage(
+                `You just need ${
+                    50 - totalLabAssessmentsMarks
+                } marks out of 40 in LAB FAT to pass Lab Component`
+            );
+            setMemeImage((prevMeme) => highRisk);
+        }
+
+        // if total internal marks less than 10, then student cannot pass the subject, no matter what!!
         if (totalLabAssessmentsMarks < 10) {
             setLabPassingMarksMessage(
-                'Sorry! You cannot pass lab component this subject..'
+                '😭 Sorry! You cannot pass lab component of this subject...keep 6k ready 😜'
             );
+            setMemeImage((prevMeme) => betaTumse);
         }
     };
     return (
@@ -259,7 +277,14 @@ const FatPassingMarks = () => {
                     </form>
                     <br />
                     {theoryPassingMarksMessage.length > 0 && (
-                        <h1 className="answer">{theoryPassingMarksMessage}</h1>
+                        <div>
+                            <h1 className="answer">
+                                {theoryPassingMarksMessage}
+                            </h1>
+                            <div className="meme-image">
+                                <img src={memeImage} alt="img" />
+                            </div>
+                        </div>
                     )}
                 </div>
             ) : (
@@ -366,7 +391,12 @@ const FatPassingMarks = () => {
                     </form>
                     <br />
                     {labPassingMarksMessage.length > 0 && (
-                        <h1 className="answer">{labPassingMarksMessage}</h1>
+                        <div>
+                            <h1 className="answer">{labPassingMarksMessage}</h1>
+                            <div className="meme-image">
+                                <img src={memeImage} alt="img" />
+                            </div>
+                        </div>
                     )}
                 </div>
             )}

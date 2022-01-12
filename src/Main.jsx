@@ -59,6 +59,7 @@ export default function BasicTabs() {
           // className="tabs-panel"
           variant="scrollable"
           scrollButtons="auto"
+          TabIndicatorProps={{style: {background:'#fff'}}}
         >
           <Tab className="feature-label" label="Calculate GPA" {...a11yProps(0)} />
           <Tab className="feature-label" label="Calculate CGPA" {...a11yProps(1)} />

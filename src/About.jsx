@@ -9,27 +9,16 @@ function About() {
         <h1 className="main-heading">About GPA Calculator</h1>
         <br />
         <p>
-          lorem ipsum cnzjdncjlznjfncljka cznl vcjl zvzlnvlj jnn jlz jlzn jlz z
-          jlz jklzn lnzl klz nlznln kzkl lznl z lndlcnzlclkz
+          <ul>
+            <li><span>Find out your GPA of any semester based on your grades</span></li>
+            <li><span>Calculate your CGPA based on your credits and GPA of previous semesters</span></li>
+            <li><span>Figure out how much you need to score to pass your theory/lab component</span></li>
+          </ul>
         </p>
       </div>
       <div className="col-lg-5 image">
         <img src={logo} alt="img" />
       </div>
-      {/* <table>
-        <tr>
-          <td className="heading">
-            <h1>About GPA Calculator</h1>
-            <p>
-              lorem ipsum cnzjdncjlznjfncljka cznl vcjl zvzlnvlj jnn jlz jlzn
-              jlz z jlz jklzn lnzl klz nlznln kzkl lznl z lndlcnzlclkz
-            </p>
-          </td>
-          <td>
-            <img src={logo} alt="img" />
-          </td>
-        </tr>
-      </table> */}
     </div>
   );
 }

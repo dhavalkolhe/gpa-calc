@@ -1,0 +1,18 @@
+.steps {
+    line-height: 2;
+}
+
+.meme-image {
+    margin: 2rem auto;
+    width: 50%;
+}
+
+.meme-image img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+    .meme-image {
+        width: 90%;
+    }
+}
