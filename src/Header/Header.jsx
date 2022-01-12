@@ -80,11 +80,6 @@ export default function Header() {
           >
             Community
           </a>
-          {/* <NavHashLink smooth to="/#" >
-            <p className="nav__item">
-            </p>
-          </NavHashLink> */}
-
           <NavHashLink smooth to="/#services" className="navbar__link">
             <p className="nav__item">Service</p>
           </NavHashLink>
