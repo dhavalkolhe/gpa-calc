@@ -1,5 +1,5 @@
 // import { SmokeFreeSharp } from "@mui/icons-material";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import './cgpa.css';
 import soFunnyKim from '../assets/so-funny-kim.jpg';
@@ -21,8 +21,9 @@ const Cgpa = () => {
         }
         return countEmptyFields > 0;
     }
+    let isFormDataEmpty;
     const onSubmit = (data) => {
-        const isFormDataEmpty = isEmpty(data);
+        isFormDataEmpty = isEmpty(data);
         if (!isFormDataEmpty) {
             let credits = 0;
             let gpa = 0;
@@ -32,22 +33,32 @@ const Cgpa = () => {
                     data[`sem${i}-marks`] * data[`sem${i}-credits`]
                 );
             }
-            setTotal((prevTotal) => (gpa / credits).toFixed(2));
+            setTotal((prevTotal) => (gpa / credits).toFixed(2).toString());
         } else {
             setTotal(
                 (prevTotal) =>
                     'Please fill in all the fields or select only required number of semesters'
             );
-            setMemeImage((prevMeme) => soFunnyKim);
-        }
-        if (total === '10') {
-            setMemeImage((prevMeme) => bhotTez);
-        } else if (total >= '9.00') {
-            setMemeImage((prevMeme) => mithaiBaat);
-        } else {
-            setMemeImage((prevMeme) => youCanDoIt);
         }
     };
+
+    useEffect(() => {
+        const memeHandler = () => {
+            if (
+                total ===
+                'Please fill in all the fields or select only required number of semesters'
+            ) {
+                setMemeImage((prevMeme) => soFunnyKim);
+            } else if (total === '10.00') {
+                setMemeImage((prevMeme) => bhotTez);
+            } else if (total >= '9.00') {
+                setMemeImage((prevMeme) => mithaiBaat);
+            } else {
+                setMemeImage((prevMeme) => youCanDoIt);
+            }
+        };
+        memeHandler();
+    }, [isFormDataEmpty, total]);
 
     // generate inputs for number of semesters
     for (let i = 0; i < semesters; i++) {

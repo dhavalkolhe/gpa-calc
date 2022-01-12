@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import './Calculator.css';
 import './cgpa.css';
@@ -13,6 +13,7 @@ const Calculator = () => {
     const list1 = [];
     const { register, handleSubmit } = useForm();
     let [total, setTotal] = useState(0);
+
     let onSubmit = (data) => {
         let credits = 0;
         let gpa = 0;
@@ -20,15 +21,22 @@ const Calculator = () => {
             credits += parseFloat(data[`credits-${i}`]);
             gpa += parseFloat(data[`credits-${i}`] * data[`grades-${i}`]);
         }
-        setTotal(prevTotal => (gpa / credits).toFixed(2));
-        if (total >= 9.5) {
-            setMemeImage(prevMeme =>  peopleCry);
-        } else if (total >= 9.0 && total < 9.5) {
-            setMemeImage(prevMeme => mithaiBaat);
-        } else {
-            setMemeImage(prevMeme => youCanDoIt);
-        }
+        setTotal((prevTotal) => (gpa / credits).toFixed(2));
     };
+
+    useEffect(() => {
+        const memeHandler = () => {
+            if (total >= 9.5) {
+                setMemeImage((prevMeme) => peopleCry);
+            } else if (total >= 9.0 && total < 9.5) {
+                setMemeImage((prevMeme) => mithaiBaat);
+            } else {
+                setMemeImage((prevMeme) => youCanDoIt);
+            }
+        };
+        memeHandler();
+    }, [total]);
+
     for (var i = 0; i < sub; i++) {
         list1.push(
             <div key={i}>
@@ -76,7 +84,11 @@ const Calculator = () => {
                 <div>{list1}</div>
                 <br />
                 <br />
-                {sub > 0 && <button type="Submit">Calculate</button>}
+                {sub > 0 && (
+                    <button type="Submit">
+                        Calculate
+                    </button>
+                )}
             </form>
             <br />
             {total !== 0 && (
