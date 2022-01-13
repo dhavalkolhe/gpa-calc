@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import betaTumse from '../assets/beta-tumse.jpg';
-import youCanDoIt from '../assets/you-can-do-it.jpg';
-import highRisk from '../assets/high-risk.jpg';
-import buddhiTez from '../assets/buddhi-tez.jpg';
+import betaTumse from '../../assets/beta-tumse.jpg';
+import youCanDoIt from '../../assets/you-can-do-it.jpg';
+import highRisk from '../../assets/high-risk.jpg';
+import buddhiTez from '../../assets/buddhi-tez.jpg';
 
 const FatPassingMarks = () => {
     // meme image link state

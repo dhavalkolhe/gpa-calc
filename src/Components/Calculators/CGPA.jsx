@@ -2,11 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import './cgpa.css';
-import soFunnyKim from '../assets/so-funny-kim.jpg';
-import mithaiBaat from '../assets/mithai-baat-dijiye.jpg';
-import bhotTez from '../assets/bhot-tez.jpg';
-import youCanDoIt from '../assets/you-can-do-it.jpg';
-import disappointMeme from '../assets/dis.jpg';
+import soFunnyKim from '../../assets/so-funny-kim.jpg';
+import mithaiBaat from '../../assets/mithai-baat-dijiye.jpg';
+import bhotTez from '../../assets/bhot-tez.jpg';
+import youCanDoIt from '../../assets/you-can-do-it.jpg';
+import disappointMeme from '../../assets/dis.jpg';
 
 const Cgpa = () => {
     // meme image link state
@@ -84,8 +84,8 @@ const Cgpa = () => {
                         name={`sem${i + 1}-marks`}
                         placeholder="GPA"
                         step="0.01"
-                        min={1.00}
-                        max={10.00}
+                        min={1.0}
+                        max={10.0}
                     />
                 </div>
             );
@@ -151,7 +151,8 @@ const Cgpa = () => {
                 <br />
                 <div>
                     <h1 className="answer">
-                        Cannot calculate CGPA for more than 10 semesters....majak bana rakha h
+                        Cannot calculate CGPA for more than 10
+                        semesters....majak bana rakha h
                     </h1>
                     <div className="meme-image">
                         <img src={disappointMeme} alt="img" />

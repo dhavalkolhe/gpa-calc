@@ -1,0 +1,54 @@
+.text,
+.image {
+    z-index: 100;
+}
+
+.row {
+    margin-top: 10%;
+    justify-content: center;
+}
+
+.image {
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-weight: 600;
+    font-size: 3.75rem;
+}
+
+p {
+    color: #fff;
+}
+
+p span {
+    color: white;
+}
+
+li {
+    margin: 1rem 0;
+}
+
+li span {
+    position: relative;
+    left: -40px;
+    line-height: 1.75;
+    font-size: 1.35rem;
+}
+
+.heading {
+    text-align: left;
+}
+
+@media only screen and (max-width: 992px) {
+    p {
+        font-size: 1.5rem;
+    }
+    .image {
+        margin-top: 2rem;
+    }
+    img {
+        width: 55%;
+    }
+}

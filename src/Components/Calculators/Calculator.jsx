@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import './Calculator.css';
 import './cgpa.css';
-import peopleCry from '../assets/people-crying.jpg';
-import mithaiBaat from '../assets/mithai-baat-dijiye.jpg';
-import youCanDoIt from '../assets/you-can-do-it.jpg';
-import disappointMeme from '../assets/dis.jpg';
+import peopleCry from '../../assets/people-crying.jpg';
+import mithaiBaat from '../../assets/mithai-baat-dijiye.jpg';
+import youCanDoIt from '../../assets/you-can-do-it.jpg';
+import disappointMeme from '../../assets/dis.jpg';
 
 const Calculator = () => {
     // meme image link state

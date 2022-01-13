@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from './Navbar';
-import About from './About';
-import Box from './Box';
-import Footer from './Footer';
+import Navbar from './Components/Navbar/Navbar';
+import About from './Components/About/About';
+import Box from './Components/Box/Box';
+import Footer from './Components/Footer/Footer';
 import './App.css';
 
 function App() {
