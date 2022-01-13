@@ -6,6 +6,7 @@ import soFunnyKim from '../assets/so-funny-kim.jpg';
 import mithaiBaat from '../assets/mithai-baat-dijiye.jpg';
 import bhotTez from '../assets/bhot-tez.jpg';
 import youCanDoIt from '../assets/you-can-do-it.jpg';
+import disappointMeme from '../assets/dis.jpg';
 
 const Cgpa = () => {
     // meme image link state
@@ -61,62 +62,100 @@ const Cgpa = () => {
     }, [isFormDataEmpty, total]);
 
     // generate inputs for number of semesters
-    for (let i = 0; i < semesters; i++) {
-        semesterList.push(
-            <div key={i}>
-                <label htmlFor="">Semester {i + 1}: </label>
+    if (semesters <= 10) {
+        for (let i = 0; i < semesters; i++) {
+            semesterList.push(
+                <div key={i}>
+                    <br />
+                    <label htmlFor="">Semester {i + 1}: </label>
+                    <br />
+                    <input
+                        type="number"
+                        step="0.5"
+                        {...register(`sem${i + 1}-credits`)}
+                        name={`sem${i + 1}-credits`}
+                        placeholder="Total Credits"
+                        max={27}
+                    />
+                    <input
+                        type="number"
+                        {...register(`sem${i + 1}-marks`)}
+                        name={`sem${i + 1}-marks`}
+                        placeholder="GPA"
+                        step="0.01"
+                    />
+                </div>
+            );
+        }
+        return (
+            <div className="CGPA">
+                <p className="steps">
+                    <br />
+                    Steps: <br />
+                    🎰 Enter number of semesters <br />
+                    📌 Put grades obtained and credits of each course <br />
+                    🎯 We'll show you your exact CGPA <br /> <br />
+                </p>
+                <form>
+                    <h6>Semester Count: </h6>
+                    <input
+                        type="number"
+                        onChange={(e) => setSemesters(e.target.value)}
+                    />
+                </form>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <div>{semesterList}</div>
+                    <br />
+                    <br />
+                    {semesters > 0 && <button type="Submit">Calculate</button>}
+                </form>
                 <br />
-                <input
-                    type="number"
-                    step="0.5"
-                    {...register(`sem${i + 1}-credits`)}
-                    name={`sem${i + 1}-credits`}
-                    placeholder="Total Credits"
-                />
-                <input
-                    type="number"
-                    {...register(`sem${i + 1}-marks`)}
-                    name={`sem${i + 1}-marks`}
-                    placeholder="GPA"
-                    step="0.01"
-                />
+                {total !== 0 && (
+                    <div>
+                        <h1 className="answer">
+                            {total.length > 5 ? `${total}` : `GPA: ${total}`}
+                        </h1>
+                        <div className="meme-image">
+                            <img src={memeImage} alt="img" />
+                        </div>
+                    </div>
+                )}
+            </div>
+        );
+    } else {
+        return (
+            <div className="CGPA">
+                <p className="steps">
+                    <br />
+                    Steps: <br />
+                    🎰 Enter number of semesters <br />
+                    📌 Put grades obtained and credits of each course <br />
+                    🎯 We'll show you your exact CGPA <br /> <br />
+                </p>
+                <form>
+                    <h6>Semester Count: </h6>
+                    <input
+                        type="number"
+                        onChange={(e) => setSemesters(e.target.value)}
+                    />
+                </form>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <div>{semesterList}</div>
+                    <br />
+                    <br />
+                    {semesters > 0 && <button type="Submit">Calculate</button>}
+                </form>
+                <br />
+                <div>
+                    <h1 className="answer">
+                        Cannot calculate CGPA for more than 10 semesters....majak bana rakha h
+                    </h1>
+                    <div className="meme-image">
+                        <img src={disappointMeme} alt="img" />
+                    </div>
+                </div>
             </div>
         );
     }
-    return (
-        <div className="CGPA">
-            <p className="steps">
-                <br />
-                Steps: <br />
-                🎰 Enter number of semesters <br />
-                📌 Put grades obtained and credits of each course <br />
-                🎯 We'll show you your exact CGPA <br /> <br />
-            </p>
-            <form>
-                <h6>Semester Count: </h6>
-                <input
-                    type="number"
-                    onChange={(e) => setSemesters(e.target.value)}
-                />
-            </form>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <div>{semesterList}</div>
-                <br />
-                <br />
-                {semesters > 0 && <button type="Submit">Calculate</button>}
-            </form>
-            <br />
-            {total !== 0 && (
-                <div>
-                    <h1 className="answer">
-                        {total.length > 5 ? `${total}` : `GPA: ${total}`}
-                    </h1>
-                    <div className="meme-image">
-                        <img src={memeImage} alt="img" />
-                    </div>
-                </div>
-            )}
-        </div>
-    );
 };
 export default Cgpa;

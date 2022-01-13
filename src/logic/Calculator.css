@@ -32,3 +32,13 @@ form button {
   font-size: 20px;
   text-align: center;
 }
+
+.subject-select-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h4 {
+  margin: 0 auto;
+  text-align: center;
+}
