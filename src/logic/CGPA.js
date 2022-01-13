@@ -75,6 +75,7 @@ const Cgpa = () => {
                         {...register(`sem${i + 1}-credits`)}
                         name={`sem${i + 1}-credits`}
                         placeholder="Total Credits"
+                        min={16}
                         max={27}
                     />
                     <input
@@ -83,6 +84,8 @@ const Cgpa = () => {
                         name={`sem${i + 1}-marks`}
                         placeholder="GPA"
                         step="0.01"
+                        min={1.00}
+                        max={10.00}
                     />
                 </div>
             );

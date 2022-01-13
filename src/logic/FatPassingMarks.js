@@ -206,6 +206,8 @@ const FatPassingMarks = () => {
                                 name="cat-1-marks"
                                 value={theoryMarksFormData['cat-1-marks']}
                                 onChange={onMarksValueChangeHandler}
+                                min={0}
+                                max={30}
                             />
                         </div>
                         <br />
@@ -222,6 +224,8 @@ const FatPassingMarks = () => {
                                 name="cat-2-marks"
                                 value={theoryMarksFormData['cat-2-marks']}
                                 onChange={onMarksValueChangeHandler}
+                                min={0}
+                                max={30}
                             />
                         </div>
                         <br />
@@ -238,6 +242,8 @@ const FatPassingMarks = () => {
                                 name="internal-1-marks"
                                 value={theoryMarksFormData['internal-1-marks']}
                                 onChange={onMarksValueChangeHandler}
+                                min={0}
+                                max={10}
                             />
                         </div>
                         <br />
@@ -254,6 +260,8 @@ const FatPassingMarks = () => {
                                 name="internal-2-marks"
                                 value={theoryMarksFormData['internal-2-marks']}
                                 onChange={onMarksValueChangeHandler}
+                                min={0}
+                                max={10}
                             />
                         </div>
                         <br />
@@ -270,6 +278,8 @@ const FatPassingMarks = () => {
                                 name="internal-3-marks"
                                 value={theoryMarksFormData['internal-3-marks']}
                                 onChange={onMarksValueChangeHandler}
+                                min={0}
+                                max={10}
                             />
                         </div>
                         <br />
@@ -304,6 +314,8 @@ const FatPassingMarks = () => {
                                 name="lab-1"
                                 value={labMarksFormData['lab-1']}
                                 onChange={onLabMarksChangeHandler}
+                                min={0}
+                                max={10}
                             />
                         </div>
                         <br />
@@ -320,6 +332,8 @@ const FatPassingMarks = () => {
                                 name="lab-2"
                                 value={labMarksFormData['lab-2']}
                                 onChange={onLabMarksChangeHandler}
+                                min={0}
+                                max={10}
                             />
                         </div>
                         <br />
@@ -336,6 +350,8 @@ const FatPassingMarks = () => {
                                 name="lab-3"
                                 value={labMarksFormData['lab-3']}
                                 onChange={onLabMarksChangeHandler}
+                                min={0}
+                                max={10}
                             />
                         </div>
                         <br />
@@ -352,6 +368,8 @@ const FatPassingMarks = () => {
                                 name="lab-4"
                                 value={labMarksFormData['lab-4']}
                                 onChange={onLabMarksChangeHandler}
+                                min={0}
+                                max={10}
                             />
                         </div>
                         <br />
@@ -368,6 +386,8 @@ const FatPassingMarks = () => {
                                 name="lab-5"
                                 value={labMarksFormData['lab-5']}
                                 onChange={onLabMarksChangeHandler}
+                                min={0}
+                                max={10}
                             />
                         </div>
                         <br />
@@ -384,6 +404,8 @@ const FatPassingMarks = () => {
                                 name="lab-6"
                                 value={labMarksFormData['lab-6']}
                                 onChange={onLabMarksChangeHandler}
+                                min={0}
+                                max={10}
                             />
                         </div>
                         <br />
