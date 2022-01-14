@@ -6,11 +6,28 @@ li {
     padding-left: 50px;
 }
 
+.navbar{
+    padding: 1rem 0;
+}
+
 .nav-link {
-    color: white !important;
     font-size: 16px !important;
     font-weight: 500 !important;
 }
+
+.container-fluid{
+    background: #FFFFFF;
+    box-shadow: 2px 4px 26px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 60px;
+    padding: 0 4rem;
+}
+
+.nav-item{
+    letter-spacing: 0.05em ;
+}
+
+
 
 /* .navbar-brand {
   background: url(./vitrendz.svg);

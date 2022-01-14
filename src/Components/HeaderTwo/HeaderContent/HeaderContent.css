@@ -1,0 +1,22 @@
+.header-content {
+    padding: 10px 170px;
+
+}
+.header-content__heading{
+    font-size: 4.5rem;
+    color: #0D2451;
+    font-weight: 300;
+
+}
+
+.header-content__text{
+    padding: 2rem 0;
+    color: #575C6E;
+    font-size: 1.75rem;
+    width: 70%;
+    z-index: 20;
+}
+
+.header-content__heading span{
+    font-weight: bold;
+}

@@ -1,3 +1,7 @@
+form {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
 input,
 option,
 select {
@@ -8,6 +12,7 @@ select {
   border: none;
   color: white;
   padding: 5px 10px;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 select,
@@ -15,6 +20,7 @@ input {
   margin-top: 10px;
   margin-right: 30px;
   outline: none;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 form button {
@@ -31,7 +37,9 @@ form button {
 .answer {
   font-size: 20px;
   text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
 }
+
 
 .subject-select-container {
   display: flex;

@@ -1,9 +1,10 @@
 .feature-label {
-    color: #fff !important;
+    color: #000 !important;
     letter-spacing: 1.5px !important;
     font-weight: 600 !important;
     font-size: 1.15rem !important;
     text-transform: capitalize !important;
+    font-family: 'Nunito Sans', sans-serif !important;
 }
 
 .tabs-panel {

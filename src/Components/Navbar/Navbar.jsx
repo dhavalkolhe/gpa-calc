@@ -1,10 +1,10 @@
 import React from 'react';
 import './Navbar.css';
-import image from '../../assets/logoNav.svg';
+import image from '../../assets/vitrendz-logo-new.svg';
 
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark">
+        <nav className="navbar navbar-expand-lg navbar-light">
             <div className="container-fluid">
                 <a className="navbar-brand" href="https://vitrendz.com/">
                     <img src={image} alt="img" />
@@ -25,12 +25,21 @@ function Navbar() {
                         <li className="nav-item">
                             <a
                                 className="nav-link"
-                                aria-current="page"
-                                href="https://community.vitrendz.com/"
+                                href="https://vitrendz.com/"
                             >
-                                Community
+                                About us
                             </a>
                         </li>
+
+                        {/* <li className="nav-item">
+                            <a
+                                className="nav-link"
+                                href="https://vitrendz.com/"
+                            >
+                                Calculators
+                            </a>   
+                        </li> */}
+
                         <li className="nav-item">
                             <a
                                 className="nav-link"
@@ -39,21 +48,16 @@ function Navbar() {
                                 Services
                             </a>
                         </li>
+                        
                         <li className="nav-item">
                             <a
                                 className="nav-link"
-                                href="https://vitrendz.com/"
+                                aria-current="page"
+                                href="https://community.vitrendz.com/"
                             >
-                                About us
+                                Community
                             </a>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                                className="nav-link"
-                                href="https://resources.vitrendz.com/"
-                            >
-                                Others
-                            </a>
+
                         </li>
                     </ul>
                 </div>

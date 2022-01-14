@@ -1,17 +1,15 @@
 .Main {
-    /* background: linear-gradient(to top left, grey, white);
-  opacity: 0.7; */
-    background: linear-gradient(
-        110.02deg,
-        rgba(255, 255, 255, 0.4) 3.43%,
-        rgba(205, 205, 205, 0.1) 98.91%
-    );
-    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(40px);
-    margin: 8rem auto;
+    background: #FEFEFE;
+    box-shadow: 2px 4px 26px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    color: #000;
+    margin: 0 auto;
+    margin-bottom: 5rem;
     padding: 4rem 6rem;
-    border-radius: 20px;
     width: 80%;
+    position: relative;
+    top: -1.5rem;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 @media only screen and (max-width: 992px) {
