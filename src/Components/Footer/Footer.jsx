@@ -5,7 +5,7 @@ import './Footer.css';
 function Footer() {
     return (
         <div className="footer-main">
-            <img className="footer-svg" src={footerBg} alt="footer-bg" />
+            {/* <img className="footer-svg" src={footerBg} alt="footer-bg" /> */}
             <footer className="footer">
                 <div className="footer__heading-container">
                     <h1 className="footer-heading">GPA Calculator</h1>

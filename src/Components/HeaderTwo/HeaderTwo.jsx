@@ -6,7 +6,13 @@ import './Headertwo.css'
 const HeaderTwo = () => {
     return (
         <div className="header-main">
-            <img className="header-svg" src={headerSvg} alt="header-background" />
+            {/* <div className="header__svg-container">
+                <img
+                    className="header-svg"
+                    src={headerSvg}
+                    alt="header-background"
+                />
+            </div> */}
             <div className="header">
                 <Navbar />
                 <HeaderContent />

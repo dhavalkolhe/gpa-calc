@@ -20,3 +20,12 @@
 .header-content__heading span{
     font-weight: bold;
 }
+
+@media only screen and (max-width: 1300px) {
+    .header-content__heading {
+        font-size: 3.5rem;
+    }
+    .header-content__text {
+        font-size: 1.5rem;
+    }
+}
