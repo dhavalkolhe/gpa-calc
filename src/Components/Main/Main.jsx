@@ -51,7 +51,13 @@ export default function BasicTabs() {
 
     return (
         <Box sx={{ width: '100%' }}>
-            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <Box
+                sx={{
+                    borderBottom: 1,
+                    borderColor: 'divider',
+                    borderRadius: '2rem',
+                }}
+            >
                 <Tabs
                     value={value}
                     onChange={handleChange}
@@ -59,24 +65,60 @@ export default function BasicTabs() {
                     // className="tabs-panel"
                     variant="scrollable"
                     scrollButtons="auto"
-                    TabIndicatorProps={{ style: { background: '#fff' } }}
+                    TabIndicatorProps={{
+                        style: {
+                            backgroundColor: '#2FCFB3',
+                            height: '100%',
+                            borderRadius: '2rem',
+                            zIndex: '1',
+                        },
+                    }}
+                    sx={{
+                        background: 'rgba(47,207,179,0.3)',
+                        textAlign: 'center',
+                        display: 'flex',
+                        justifyContent: 'space-around',
+                        borderRadius: '2rem',
+                    }}
                 >
                     <Tab
                         className="feature-label"
                         label="Calculate GPA"
                         {...a11yProps(0)}
+                        sx={{
+                            borderRadius: '2rem',
+                            flex: '1',
+                            zIndex: '10',
+                            color: '#000',
+                            fontWeight: 'bold',
+                        }}
                     />
                     <Tab
                         className="feature-label"
                         label="Calculate CGPA"
                         {...a11yProps(1)}
+                        sx={{
+                            marginLeft: 'auto',
+                            borderRadius: '2rem',
+                            flex: '1',
+                            zIndex: '10',
+                            color: '#000',
+                            fontWeight: 'bold',
+                        }}
                     />
                     <Tab
                         className="feature-label"
                         label="FAT Passing Marks"
                         {...a11yProps(1)}
+                        sx={{
+                            marginLeft: 'auto',
+                            borderRadius: '2rem',
+                            flex: '1',
+                            zIndex: '10',
+                            color: '#000',
+                            fontWeight: 'bold',
+                        }}
                     />
-                    {/* <Tab label="Item Three" {...a11yProps(2)} /> */}
                 </Tabs>
             </Box>
             <TabPanel value={value} index={0}>
@@ -88,9 +130,6 @@ export default function BasicTabs() {
             <TabPanel value={value} index={2}>
                 <FatPassingMarks />
             </TabPanel>
-            {/* <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel> */}
         </Box>
     );
 }
