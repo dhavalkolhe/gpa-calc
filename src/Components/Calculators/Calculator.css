@@ -1,52 +1,134 @@
+.Calculator {
+    display: flex;
+}
+
+.calculator-info {
+    border-right: 2px solid #9a9a9a;
+    flex: 1;
+}
+
+.calculator-main {
+    padding: 2rem 0;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.calculator-main-fail {
+    padding: 2rem 0;
+    padding-left: 2rem;
+    flex: 1;
+}
+
+.count-form {
+    align-self: flex-start;
+}
+
 form {
-  font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 input,
 option,
 select {
-  /* width: max-content; */
-  width: 150px;
-  background: rgba(160, 160, 160, 0.64);
-  border-radius: 7px;
-  border: none;
-  color: white;
-  padding: 5px 10px;
-  font-family: 'Nunito Sans', sans-serif;
+    width: 150px;
+    background: #efefef;
+    border-radius: 7px;
+    border: none;
+    color: #9a9a9a;
+    padding: 5px 10px;
+    font-weight: 500;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 select,
 input {
-  margin-top: 10px;
-  margin-right: 30px;
-  outline: none;
-  font-family: 'Nunito Sans', sans-serif;
+    margin-top: 10px;
+    margin-right: 30px;
+    outline: none;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 form button {
-  color: white;
-  background: #497fc0;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 50px;
-  border: none;
-  width: 150px;
-  height: 50px;
-  font-size: 18px;
+    color: white;
+    background: #497fc0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    border: none;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
 }
 
 .answer {
-  font-size: 20px;
-  text-align: center;
-  font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
-
 .subject-select-container {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subject-label,
+h6 {
+    font-weight: 700;
 }
 
 h4 {
-  margin: 0 auto;
-  text-align: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+label {
+    font-weight: 600;
+}
+
+.steps {
+    line-height: 2;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.steps span {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.cat-marks-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.internal-marks-label {
+    margin-right: 1rem;
+}
+
+.lab-marks-inputs-container {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.meme-image {
+    margin: 2rem auto;
+    width: 50%;
+}
+
+.meme-image img {
+    width: 100%;
+}
+
+.answer {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+@media only screen and (max-width: 992px) {
+    .meme-image {
+        width: 90%;
+    }
 }

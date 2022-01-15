@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import './Calculator.css';
-import './cgpa.css';
 import peopleCry from '../../assets/people-crying.jpg';
 import mithaiBaat from '../../assets/mithai-baat-dijiye.jpg';
 import youCanDoIt from '../../assets/you-can-do-it.jpg';
@@ -43,7 +42,7 @@ const Calculator = () => {
             list1.push(
                 <div key={i}>
                     <br />
-                    Subject {i + 1}
+                    <span className="subject-label">Subject {i + 1}</span>
                     <br />
                     <div className="subject-select-container">
                         <select name="credits" {...register(`credits-${i}`)}>
@@ -73,64 +72,72 @@ const Calculator = () => {
         }
         return (
             <div className="Calculator">
-                <p className="steps">
-                    <br />
-                    Steps: <br />
-                    🔢 Enter number of courses <br />
-                    🧐 Put grades obtained and credits of each course <br />
-                    💥 Voila! Your GPA for this semester <br /> <br />
-                </p>
-                <form>
-                    <h6>Subject Count: </h6>
-                    <input
-                        type="number"
-                        onChange={(e) => setSub(e.target.value)}
-                    />
-                </form>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <div>{list1}</div>
-                    <br />
-                    <br />
-                    {sub > 0 && <button type="Submit">Calculate</button>}
-                </form>
-                <br />
-                {total !== 0 && (
-                    <div>
-                        <h1 className="answer">GPA: {total}</h1>
-                        <div className="meme-image">
-                            <img src={memeImage} alt="img" />
+                <div className="calculator-info">
+                    <p className="steps">
+                        <br />
+                        <span>How to use GPA calculator</span> <br />
+                        🔢 Enter number of courses <br />
+                        🧐 Put grades obtained and credits of each course <br />
+                        💥 Voila! Your GPA for this semester <br /> <br />
+                    </p>
+                    {total !== 0 && (
+                        <div>
+                            <h1 className="answer">GPA: {total}</h1>
+                            <div className="meme-image">
+                                <img src={memeImage} alt="img" />
+                            </div>
                         </div>
-                    </div>
-                )}
+                    )}
+                </div>
+                <div className="calculator-main">
+                    <form className="count-form">
+                        <h6>Subject Count: </h6>
+                        <input
+                            type="number"
+                            onChange={(e) => setSub(e.target.value)}
+                        />
+                    </form>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <div>{list1}</div>
+                        <br />
+                        <br />
+                        {sub > 0 && <button type="Submit">Calculate</button>}
+                    </form>
+                </div>
+                <br />
             </div>
         );
     } else {
-        
         return (
             <div className="Calculator">
-                <p className="steps">
-                    <br />
-                    Steps: <br />
-                    🔢 Enter number of courses <br />
-                    🧐 Put grades obtained and credits of each course <br />
-                    💥 Voila! Your GPA for this semester <br /> <br />
-                </p>
-                <form>
-                    <h6>Subject Count: </h6>
-                    <input
-                        type="number"
-                        onChange={(e) => setSub(e.target.value)}
-                    />
-                </form>
-                <br/>
-                <div>
-                    <h1 className="answer">
-                        Cannot enter more than 10 subjects....majak bana rakha h
-                    </h1>
-                    <div className="meme-image">
-                        <img src={disappointMeme} alt="img" />
+                <div className="calculator-info">
+                    <p className="steps">
+                        <br />
+                        <span>How to use GPA calculator</span> <br />
+                        🔢 Enter number of courses <br />
+                        🧐 Put grades obtained and credits of each course <br />
+                        💥 Voila! Your GPA for this semester <br /> <br />
+                    </p>
+                    <div>
+                        <h1 className="answer">
+                            Cannot enter more than 10 subjects....majak bana
+                            rakha h
+                        </h1>
+                        <div className="meme-image">
+                            <img src={disappointMeme} alt="img" />
+                        </div>
                     </div>
                 </div>
+                <div className="calculator-main-fail">
+                    <form>
+                        <h6>Subject Count: </h6>
+                        <input
+                            type="number"
+                            onChange={(e) => setSub(e.target.value)}
+                        />
+                    </form>
+                </div>
+                <br />
             </div>
         );
     }

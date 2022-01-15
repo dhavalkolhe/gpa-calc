@@ -190,236 +190,245 @@ const FatPassingMarks = () => {
                 <option value="Lab">Lab</option>
             </select>
             {subjectComponent === 'Theory' ? (
-                <div>
-                    <form onSubmit={onTheoryMarksFormSubmitHandler}>
-                        <br />
-                        <div className="form-input">
-                            <label htmlFor="cat-1">
-                                CAT - 1 Marks (out of 30)
-                            </label>
+                <div className="Calculator">
+                    <div className="calculator-info">
+                        <form onSubmit={onTheoryMarksFormSubmitHandler}>
                             <br />
-                            <input
-                                id="cat-1"
-                                type="number"
-                                step="0.5"
-                                placeholder="CAT-1 Marks"
-                                name="cat-1-marks"
-                                value={theoryMarksFormData['cat-1-marks']}
-                                onChange={onMarksValueChangeHandler}
-                                min={0}
-                                max={30}
-                            />
-                        </div>
-                        <br />
-                        <div className="form-input">
-                            <label htmlFor="cat-2">
-                                CAT - 2 Marks (out of 30)
-                            </label>
-                            <br />
-                            <input
-                                id="cat-2"
-                                type="number"
-                                step="0.5"
-                                placeholder="CAT-2 Marks"
-                                name="cat-2-marks"
-                                value={theoryMarksFormData['cat-2-marks']}
-                                onChange={onMarksValueChangeHandler}
-                                min={0}
-                                max={30}
-                            />
-                        </div>
-                        <br />
-                        <div className="form-input">
-                            <label htmlFor="internal-1">
-                                DA/QUIZ-1 Marks (out of 10)
-                            </label>
-                            <br />
-                            <input
-                                id="internal-1"
-                                type="number"
-                                step="0.5"
-                                placeholder="DA/QUIZ Marks"
-                                name="internal-1-marks"
-                                value={theoryMarksFormData['internal-1-marks']}
-                                onChange={onMarksValueChangeHandler}
-                                min={0}
-                                max={10}
-                            />
-                        </div>
-                        <br />
-                        <div className="form-input">
-                            <label htmlFor="internal-2">
-                                DA/QUIZ-2 Marks (out of 10)
-                            </label>
-                            <br />
-                            <input
-                                id="internal-2"
-                                type="number"
-                                step="0.5"
-                                placeholder="DA/QUIZ Marks"
-                                name="internal-2-marks"
-                                value={theoryMarksFormData['internal-2-marks']}
-                                onChange={onMarksValueChangeHandler}
-                                min={0}
-                                max={10}
-                            />
-                        </div>
-                        <br />
-                        <div className="form-input">
-                            <label htmlFor="internal-3">
-                                DA/QUIZ-3 Marks (out of 10)
-                            </label>
-                            <br />
-                            <input
-                                id="internal-3"
-                                type="number"
-                                step="0.5"
-                                placeholder="DA/QUIZ Marks"
-                                name="internal-3-marks"
-                                value={theoryMarksFormData['internal-3-marks']}
-                                onChange={onMarksValueChangeHandler}
-                                min={0}
-                                max={10}
-                            />
-                        </div>
-                        <br />
-                        <button type="Submit">Calculate</button>
-                    </form>
-                    <br />
-                    {theoryPassingMarksMessage.length > 0 && (
-                        <div>
-                            <h1 className="answer">
-                                {theoryPassingMarksMessage}
-                            </h1>
-                            <div className="meme-image">
-                                <img src={memeImage} alt="img" />
+                            <div className="cat-marks-container">
+                                <div className="form-input">
+                                    <label htmlFor="cat-1">CAT - 1 Marks</label>
+                                    <br />
+                                    <input
+                                        id="cat-1"
+                                        type="number"
+                                        step="0.5"
+                                        placeholder="(out of 30)"
+                                        name="cat-1-marks"
+                                        onChange={onMarksValueChangeHandler}
+                                        min={0}
+                                        max={30}
+                                    />
+                                </div>
+                                <br />
+                                <div className="form-input">
+                                    <label htmlFor="cat-2">CAT - 2 Marks</label>
+                                    <br />
+                                    <input
+                                        id="cat-2"
+                                        type="number"
+                                        step="0.5"
+                                        placeholder="(out of 30)"
+                                        name="cat-2-marks"
+                                        onChange={onMarksValueChangeHandler}
+                                        min={0}
+                                        max={30}
+                                    />
+                                </div>
                             </div>
-                        </div>
-                    )}
+
+                            <br />
+                            <div className="form-input">
+                                <label
+                                    className="internal-marks-label"
+                                    htmlFor="internal-1"
+                                >
+                                    DA/QUIZ-1 Marks
+                                </label>
+                                <input
+                                    id="internal-1"
+                                    type="number"
+                                    step="0.5"
+                                    placeholder="(out of 10)"
+                                    name="internal-1-marks"
+                                    onChange={onMarksValueChangeHandler}
+                                    min={0}
+                                    max={10}
+                                />
+                            </div>
+                            <br />
+                            <div className="form-input">
+                                <label
+                                    className="internal-marks-label"
+                                    htmlFor="internal-2"
+                                >
+                                    DA/QUIZ-2 Marks
+                                </label>
+                                <input
+                                    id="internal-2"
+                                    type="number"
+                                    step="0.5"
+                                    placeholder="(out of 10)"
+                                    name="internal-2-marks"
+                                    onChange={onMarksValueChangeHandler}
+                                    min={0}
+                                    max={10}
+                                />
+                            </div>
+                            <br />
+                            <div className="form-input">
+                                <label
+                                    className="internal-marks-label"
+                                    htmlFor="internal-3"
+                                >
+                                    DA/QUIZ-3 Marks
+                                </label>
+                                <input
+                                    id="internal-3"
+                                    type="number"
+                                    step="0.5"
+                                    placeholder="(out of 10)"
+                                    name="internal-3-marks"
+                                    onChange={onMarksValueChangeHandler}
+                                    min={0}
+                                    max={10}
+                                />
+                            </div>
+                            <br />
+                            <button type="Submit">Calculate</button>
+                        </form>
+                    </div>
+                    <br />
+                    <div className="calculator-main">
+                        {theoryPassingMarksMessage.length > 0 && (
+                            <div>
+                                <h1 className="answer">
+                                    {theoryPassingMarksMessage}
+                                </h1>
+                                <div className="meme-image">
+                                    <img src={memeImage} alt="img" />
+                                </div>
+                            </div>
+                        )}
+                    </div>
                 </div>
             ) : (
-                <div>
-                    <form onSubmit={onLabMarksFormSubmitHandler}>
-                        <br />
-                        <div className="form-input">
-                            <label htmlFor="lab-1">
-                                Lab Assessment - 1 Marks (out of 10)
-                            </label>
+                <div className="Calculator">
+                    <div className="calculator-info">
+                        <form onSubmit={onLabMarksFormSubmitHandler}>
                             <br />
-                            <input
-                                id="lab-1"
-                                type="number"
-                                step="0.5"
-                                placeholder="Lab Assessment Marks"
-                                name="lab-1"
-                                value={labMarksFormData['lab-1']}
-                                onChange={onLabMarksChangeHandler}
-                                min={0}
-                                max={10}
-                            />
-                        </div>
-                        <br />
-                        <div className="form-input">
-                            <label htmlFor="lab-2">
-                                Lab Assessment - 2 Marks (out of 10)
-                            </label>
-                            <br />
-                            <input
-                                id="lab-2"
-                                type="number"
-                                step="0.5"
-                                placeholder="Lab Assessment Marks"
-                                name="lab-2"
-                                value={labMarksFormData['lab-2']}
-                                onChange={onLabMarksChangeHandler}
-                                min={0}
-                                max={10}
-                            />
-                        </div>
-                        <br />
-                        <div className="form-input">
-                            <label htmlFor="lab-3">
-                                Lab Assessment - 3 Marks (out of 10)
-                            </label>
-                            <br />
-                            <input
-                                id="lab-3"
-                                type="number"
-                                step="0.5"
-                                placeholder="Lab Assessment Marks"
-                                name="lab-3"
-                                value={labMarksFormData['lab-3']}
-                                onChange={onLabMarksChangeHandler}
-                                min={0}
-                                max={10}
-                            />
-                        </div>
-                        <br />
-                        <div className="form-input">
-                            <label htmlFor="lab-4">
-                                Lab Assessment - 4 Marks (out of 10)
-                            </label>
-                            <br />
-                            <input
-                                id="lab-4"
-                                type="number"
-                                step="0.5"
-                                placeholder="Lab Assessment Marks"
-                                name="lab-4"
-                                value={labMarksFormData['lab-4']}
-                                onChange={onLabMarksChangeHandler}
-                                min={0}
-                                max={10}
-                            />
-                        </div>
-                        <br />
-                        <div className="form-input">
-                            <label htmlFor="lab-5">
-                                Lab Assessment - 5 Marks (out of 10)
-                            </label>
-                            <br />
-                            <input
-                                id="lab-5"
-                                type="number"
-                                step="0.5"
-                                placeholder="Lab Assessment Marks"
-                                name="lab-5"
-                                value={labMarksFormData['lab-5']}
-                                onChange={onLabMarksChangeHandler}
-                                min={0}
-                                max={10}
-                            />
-                        </div>
-                        <br />
-                        <div className="form-input">
-                            <label htmlFor="lab-6">
-                                Lab Assessment - 6 Marks (out of 10)
-                            </label>
-                            <br />
-                            <input
-                                id="lab-6"
-                                type="number"
-                                step="0.5"
-                                placeholder="Lab Assessment Marks"
-                                name="lab-6"
-                                value={labMarksFormData['lab-6']}
-                                onChange={onLabMarksChangeHandler}
-                                min={0}
-                                max={10}
-                            />
-                        </div>
-                        <br />
-                        <button type="Submit">Calculate</button>
-                    </form>
-                    <br />
-                    {labPassingMarksMessage.length > 0 && (
-                        <div>
-                            <h1 className="answer">{labPassingMarksMessage}</h1>
-                            <div className="meme-image">
-                                <img src={memeImage} alt="img" />
+                            <div className="lab-marks-inputs-container">
+                                <div className="form-input">
+                                    <label htmlFor="lab-1">
+                                        Lab Assessment - 1 Marks
+                                    </label>
+                                    <br />
+                                    <input
+                                        id="lab-1"
+                                        type="number"
+                                        step="0.5"
+                                        placeholder="(out of 10)"
+                                        name="lab-1"
+                                        onChange={onLabMarksChangeHandler}
+                                        min={0}
+                                        max={10}
+                                    />
+                                </div>
+                                <br />
+                                <div className="form-input">
+                                    <label htmlFor="lab-2">
+                                        Lab Assessment - 2 Marks
+                                    </label>
+                                    <br />
+                                    <input
+                                        id="lab-2"
+                                        type="number"
+                                        step="0.5"
+                                        placeholder="(out of 10)"
+                                        name="lab-2"
+                                        onChange={onLabMarksChangeHandler}
+                                        min={0}
+                                        max={10}
+                                    />
+                                </div>
                             </div>
-                        </div>
-                    )}
+                            <div className="lab-marks-inputs-container">
+                                <div className="form-input">
+                                    <label htmlFor="lab-3">
+                                        Lab Assessment - 3 Marks
+                                    </label>
+                                    <br />
+                                    <input
+                                        id="lab-3"
+                                        type="number"
+                                        step="0.5"
+                                        placeholder="(out of 10)"
+                                        name="lab-3"
+                                        onChange={onLabMarksChangeHandler}
+                                        min={0}
+                                        max={10}
+                                    />
+                                </div>
+                                <br />
+                                <div className="form-input">
+                                    <label htmlFor="lab-4">
+                                        Lab Assessment - 4 Marks
+                                    </label>
+                                    <br />
+                                    <input
+                                        id="lab-4"
+                                        type="number"
+                                        step="0.5"
+                                        placeholder="(out of 10)"
+                                        name="lab-4"
+                                        onChange={onLabMarksChangeHandler}
+                                        min={0}
+                                        max={10}
+                                    />
+                                </div>
+                            </div>
+                            <div className="lab-marks-inputs-container">
+                                <div className="form-input">
+                                    <label htmlFor="lab-5">
+                                        Lab Assessment - 5 Marks
+                                    </label>
+                                    <br />
+                                    <input
+                                        id="lab-5"
+                                        type="number"
+                                        step="0.5"
+                                        placeholder="(out of 10)"
+                                        name="lab-5"
+                                        onChange={onLabMarksChangeHandler}
+                                        min={0}
+                                        max={10}
+                                    />
+                                </div>
+                                <br />
+                                <div className="form-input">
+                                    <label htmlFor="lab-6">
+                                        Lab Assessment - 6 Marks
+                                    </label>
+                                    <br />
+                                    <input
+                                        id="lab-6"
+                                        type="number"
+                                        step="0.5"
+                                        placeholder="(out of 10)"
+                                        name="lab-6"
+                                        onChange={onLabMarksChangeHandler}
+                                        min={0}
+                                        max={10}
+                                    />
+                                </div>
+                            </div>
+                            <br />
+                            <button type="Submit">Calculate</button>
+                        </form>
+                    </div>
+                    <br />
+
+                    <div className="calculator-main">
+                        {labPassingMarksMessage.length > 0 && (
+                            <div>
+                                <h1 className="answer">
+                                    {labPassingMarksMessage}
+                                </h1>
+                                <div className="meme-image">
+                                    <img src={memeImage} alt="img" />
+                                </div>
+                            </div>
+                        )}
+                    </div>
                 </div>
             )}
         </div>

@@ -30,16 +30,6 @@ function Navbar() {
                                 About us
                             </a>
                         </li>
-
-                        {/* <li className="nav-item">
-                            <a
-                                className="nav-link"
-                                href="https://vitrendz.com/"
-                            >
-                                Calculators
-                            </a>   
-                        </li> */}
-
                         <li className="nav-item">
                             <a
                                 className="nav-link"
@@ -48,7 +38,7 @@ function Navbar() {
                                 Services
                             </a>
                         </li>
-                        
+
                         <li className="nav-item">
                             <a
                                 className="nav-link"
@@ -57,7 +47,6 @@ function Navbar() {
                             >
                                 Community
                             </a>
-
                         </li>
                     </ul>
                 </div>

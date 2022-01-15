@@ -1,7 +1,7 @@
 // import { SmokeFreeSharp } from "@mui/icons-material";
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import './cgpa.css';
+import './Calculator.css';
 import soFunnyKim from '../../assets/so-funny-kim.jpg';
 import mithaiBaat from '../../assets/mithai-baat-dijiye.jpg';
 import bhotTez from '../../assets/bhot-tez.jpg';
@@ -91,73 +91,82 @@ const Cgpa = () => {
             );
         }
         return (
-            <div className="CGPA">
-                <p className="steps">
-                    <br />
-                    Steps: <br />
-                    🎰 Enter number of semesters <br />
-                    📌 Put grades obtained and credits of each course <br />
-                    🎯 We'll show you your exact CGPA <br /> <br />
-                </p>
-                <form>
-                    <h6>Semester Count: </h6>
-                    <input
-                        type="number"
-                        onChange={(e) => setSemesters(e.target.value)}
-                    />
-                </form>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <div>{semesterList}</div>
-                    <br />
-                    <br />
-                    {semesters > 0 && <button type="Submit">Calculate</button>}
-                </form>
-                <br />
-                {total !== 0 && (
-                    <div>
-                        <h1 className="answer">
-                            {total.length > 5 ? `${total}` : `GPA: ${total}`}
-                        </h1>
-                        <div className="meme-image">
-                            <img src={memeImage} alt="img" />
+            <div className="Calculator">
+                <div className="calculator-info">
+                    <p className="steps">
+                        <br />
+                        <span>How to Calculate CGPA</span>
+                        <br />
+                        🎰 Enter number of semesters <br />
+                        📌 Put grades obtained and credits of each course <br />
+                        🎯 We'll show you your exact CGPA <br /> <br />
+                    </p>
+                    {total !== 0 && (
+                        <div>
+                            <h1 className="answer">
+                                {total.length > 5
+                                    ? `${total}`
+                                    : `GPA: ${total}`}
+                            </h1>
+                            <div className="meme-image">
+                                <img src={memeImage} alt="img" />
+                            </div>
                         </div>
-                    </div>
-                )}
+                    )}
+                </div>
+                <div className="calculator-main">
+                    <form className="count-form">
+                        <h6>Semester Count: </h6>
+                        <input
+                            type="number"
+                            onChange={(e) => setSemesters(e.target.value)}
+                        />
+                    </form>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <div>{semesterList}</div>
+                        <br />
+                        <br />
+                        {semesters > 0 && (
+                            <button type="Submit">Calculate</button>
+                        )}
+                    </form>
+                </div>
+
+                <br />
             </div>
         );
     } else {
         return (
-            <div className="CGPA">
-                <p className="steps">
-                    <br />
-                    Steps: <br />
-                    🎰 Enter number of semesters <br />
-                    📌 Put grades obtained and credits of each course <br />
-                    🎯 We'll show you your exact CGPA <br /> <br />
-                </p>
-                <form>
-                    <h6>Semester Count: </h6>
-                    <input
-                        type="number"
-                        onChange={(e) => setSemesters(e.target.value)}
-                    />
-                </form>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <div>{semesterList}</div>
-                    <br />
-                    <br />
-                    {semesters > 0 && <button type="Submit">Calculate</button>}
-                </form>
-                <br />
-                <div>
-                    <h1 className="answer">
-                        Cannot calculate CGPA for more than 10
-                        semesters....majak bana rakha h
-                    </h1>
-                    <div className="meme-image">
-                        <img src={disappointMeme} alt="img" />
+            <div className="Calculator">
+                <div className="calculator-info">
+                    <p className="steps">
+                        <br />
+                        <span>How to Calculate CGPA</span>
+                        <br />
+                        🎰 Enter number of semesters <br />
+                        📌 Put grades obtained and credits of each course <br />
+                        🎯 We'll show you your exact CGPA <br /> <br />
+                    </p>
+                    <div>
+                        <h1 className="answer">
+                            Cannot calculate CGPA for more than 10
+                            semesters....majak bana rakha h
+                        </h1>
+                        <div className="meme-image">
+                            <img src={disappointMeme} alt="img" />
+                        </div>
                     </div>
                 </div>
+                <div className="calculator-main-fail">
+                    <form className="count-form">
+                        <h6>Semester Count: </h6>
+                        <input
+                            type="number"
+                            onChange={(e) => setSemesters(e.target.value)}
+                        />
+                    </form>
+                </div>
+                <br />
             </div>
         );
     }
