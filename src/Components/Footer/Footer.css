@@ -26,6 +26,10 @@
     text-decoration: none;
 }
 
+.footer__content-about-list {
+    list-style: none;
+}
+
 .footer__content-about-list-item span {
     font-size: 1rem;
     font-weight: 300;
