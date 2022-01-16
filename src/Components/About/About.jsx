@@ -4,7 +4,7 @@ import logo from '../../assets/about.png';
 
 function About() {
     return (
-        <div className="about">
+        <div className="about" id="about">
             <div className="about__heading-container">
                 <h3 className="about__heading">About Us</h3>
                 <div className="about__heading-link">

@@ -50,7 +50,7 @@ export default function BasicTabs() {
     };
 
     return (
-        <Box sx={{ width: '100%' }}>
+        <Box sx={{ minWidth: '20rem' }}>
             <Box
                 sx={{
                     borderBottom: 1,
@@ -76,8 +76,7 @@ export default function BasicTabs() {
                     sx={{
                         background: 'rgba(47,207,179,0.3)',
                         textAlign: 'center',
-                        display: 'flex',
-                        justifyContent: 'space-around',
+                        fontSize:'1rem',
                         borderRadius: '2rem',
                     }}
                 >
@@ -91,6 +90,8 @@ export default function BasicTabs() {
                             zIndex: '10',
                             color: '#000',
                             fontWeight: 'bold',
+                            alignSelf:'center',
+                            minWidth:'15rem'
                         }}
                     />
                     <Tab
@@ -104,6 +105,8 @@ export default function BasicTabs() {
                             zIndex: '10',
                             color: '#000',
                             fontWeight: 'bold',
+                            alignSelf:'center',
+                            minWidth:'15rem'
                         }}
                     />
                     <Tab
@@ -117,17 +120,19 @@ export default function BasicTabs() {
                             zIndex: '10',
                             color: '#000',
                             fontWeight: 'bold',
+                            alignSelf:'center',
+                            minWidth:'15rem'
                         }}
                     />
                 </Tabs>
             </Box>
-            <TabPanel value={value} index={0}>
+            <TabPanel value={value} index={0} className="tab-panel">
                 <Calculator />
             </TabPanel>
-            <TabPanel value={value} index={1}>
+            <TabPanel value={value} index={1} className="tab-panel">
                 <Cgpa />
             </TabPanel>
-            <TabPanel value={value} index={2}>
+            <TabPanel value={value} index={2} className="tab-panel">
                 <FatPassingMarks />
             </TabPanel>
         </Box>

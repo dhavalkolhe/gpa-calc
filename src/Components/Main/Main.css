@@ -1,15 +1,26 @@
 .feature-label {
-    letter-spacing: 1.5px !important;
-    font-size: 1.15rem !important;
-    text-transform: capitalize !important;
-    font-family: 'Nunito Sans', sans-serif !important;
-    display: inline-block !important;
+  letter-spacing: 1.5px !important;
+  font-size: 1.15rem !important;
+  text-transform: capitalize !important;
+  font-family: "Nunito Sans", sans-serif !important;
+  display: inline-block !important;
 }
 
-.css-13w9y9e-MuiButtonBase-root-MuiTab-root.Mui-selected {
-    color: #fff !important;
+.css-1ttpded-MuiButtonBase-root-MuiTab-root.Mui-selected,
+.css-1ow8rat-MuiButtonBase-root-MuiTab-root.Mui-selected,
+.css-1ow8rat-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: #fff !important;
 }
 
-.css-1nqan18-MuiButtonBase-root-MuiTab-root.Mui-selected {
-    color: #fff !important;
+.css-oohepw-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: #fff !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .tab-panel{
+    width: 100%;
+  }
+  .css-8atqhb{
+    width: 100% !important;
+  }
 }

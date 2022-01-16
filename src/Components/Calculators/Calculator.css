@@ -4,9 +4,10 @@
 }
 
 .calculator-info {
-    border-right: 2px solid #9a9a9a;
+    /* border-right: 2px solid #9a9a9a; */
     /* padding-right: 1rem; */
     flex: 1;
+    text-align: left;
 }
 
 .calculator-main {
@@ -37,7 +38,7 @@ form {
     align-items: center;
     margin: 1.5rem 0;
     width: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .subject-select-container {
@@ -149,8 +150,32 @@ label {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+@media only screen and (max-width: 1280px) {
+    .Calculator {
+        flex-direction: column;
+    }
+}
 @media only screen and (max-width: 992px) {
     .meme-image {
         width: 90%;
     }
 }
+@media only screen and (max-width: 744px) {
+    .subject-container{
+        flex-direction: column;
+    }
+    .subject-select-container{
+        flex-direction: column;
+        min-height: 5rem;
+        justify-content: space-between;
+    }
+    input,select{
+        margin: 0;
+    }
+    .calculator-main{
+        padding-left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
