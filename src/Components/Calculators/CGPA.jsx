@@ -9,7 +9,7 @@ import youCanDoIt from '../../assets/you-can-do-it.jpg';
 import disappointMeme from '../../assets/dis.jpg';
 
 const Cgpa = () => {
-    // meme image link state
+    // meme image state
     const [memeImage, setMemeImage] = useState('');
     const [semesters, setSemesters] = useState(0);
     const semesterList = [];
@@ -65,9 +65,9 @@ const Cgpa = () => {
     if (semesters <= 10) {
         for (let i = 0; i < semesters; i++) {
             semesterList.push(
-                <div key={i}>
+                <div key={i} className="subject-container">
                     <br />
-                    <label htmlFor="">Semester {i + 1}: </label>
+                    <label htmlFor="">Semester {i + 1} </label>
                     <br />
                     <input
                         type="number"
@@ -120,14 +120,16 @@ const Cgpa = () => {
                         <input
                             type="number"
                             onChange={(e) => setSemesters(e.target.value)}
+                            className="count-input"
                         />
                     </form>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div>{semesterList}</div>
                         <br />
-                        <br />
                         {semesters > 0 && (
-                            <button type="Submit">Calculate</button>
+                            <button type="Submit" className="calc-btn">
+                                Calculate
+                            </button>
                         )}
                     </form>
                 </div>
@@ -163,6 +165,7 @@ const Cgpa = () => {
                         <input
                             type="number"
                             onChange={(e) => setSemesters(e.target.value)}
+                            className="count-input"
                         />
                     </form>
                 </div>

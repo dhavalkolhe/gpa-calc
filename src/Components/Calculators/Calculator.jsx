@@ -40,7 +40,7 @@ const Calculator = () => {
     if (sub <= 10) {
         for (var i = 0; i < sub; i++) {
             list1.push(
-                <div key={i}>
+                <div key={i} className="subject-container">
                     <br />
                     <span className="subject-label">Subject {i + 1}</span>
                     <br />
@@ -95,13 +95,18 @@ const Calculator = () => {
                         <input
                             type="number"
                             onChange={(e) => setSub(e.target.value)}
+                            className="count-input"
                         />
                     </form>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div>{list1}</div>
                         <br />
                         <br />
-                        {sub > 0 && <button type="Submit">Calculate</button>}
+                        {sub > 0 && (
+                            <button type="Submit" className="calc-btn">
+                                Calculate
+                            </button>
+                        )}
                     </form>
                 </div>
                 <br />
@@ -134,6 +139,7 @@ const Calculator = () => {
                         <input
                             type="number"
                             onChange={(e) => setSub(e.target.value)}
+                            className="count-input"
                         />
                     </form>
                 </div>

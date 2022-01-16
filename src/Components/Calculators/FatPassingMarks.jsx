@@ -178,13 +178,13 @@ const FatPassingMarks = () => {
         }
     };
     return (
-        <div>
-            Subject Component:
-            <br />
+        <div className="fat-marks-calculator">
+            <h6>Subject Component:</h6>
             <select
                 name="subject-component"
                 onChange={componentSelectHandler}
                 value={subjectComponent}
+                className="count-input"
             >
                 <option value="Theory">Theory</option>
                 <option value="Lab">Lab</option>
@@ -207,6 +207,7 @@ const FatPassingMarks = () => {
                                         onChange={onMarksValueChangeHandler}
                                         min={0}
                                         max={30}
+                                        className="fat-inputs"
                                     />
                                 </div>
                                 <br />
@@ -222,6 +223,7 @@ const FatPassingMarks = () => {
                                         onChange={onMarksValueChangeHandler}
                                         min={0}
                                         max={30}
+                                        className="fat-inputs"
                                     />
                                 </div>
                             </div>
@@ -243,6 +245,7 @@ const FatPassingMarks = () => {
                                     onChange={onMarksValueChangeHandler}
                                     min={0}
                                     max={10}
+                                    className="fat-inputs"
                                 />
                             </div>
                             <br />
@@ -262,6 +265,7 @@ const FatPassingMarks = () => {
                                     onChange={onMarksValueChangeHandler}
                                     min={0}
                                     max={10}
+                                    className="fat-inputs"
                                 />
                             </div>
                             <br />
@@ -281,10 +285,13 @@ const FatPassingMarks = () => {
                                     onChange={onMarksValueChangeHandler}
                                     min={0}
                                     max={10}
+                                    className="fat-inputs"
                                 />
                             </div>
                             <br />
-                            <button type="Submit">Calculate</button>
+                            <button type="Submit" className="calc-btn">
+                                Calculate
+                            </button>
                         </form>
                     </div>
                     <br />
@@ -321,6 +328,7 @@ const FatPassingMarks = () => {
                                         onChange={onLabMarksChangeHandler}
                                         min={0}
                                         max={10}
+                                        className="fat-inputs"
                                     />
                                 </div>
                                 <br />
@@ -338,6 +346,7 @@ const FatPassingMarks = () => {
                                         onChange={onLabMarksChangeHandler}
                                         min={0}
                                         max={10}
+                                        className="fat-inputs"
                                     />
                                 </div>
                             </div>
@@ -356,6 +365,7 @@ const FatPassingMarks = () => {
                                         onChange={onLabMarksChangeHandler}
                                         min={0}
                                         max={10}
+                                        className="fat-inputs"
                                     />
                                 </div>
                                 <br />
@@ -373,6 +383,7 @@ const FatPassingMarks = () => {
                                         onChange={onLabMarksChangeHandler}
                                         min={0}
                                         max={10}
+                                        className="fat-inputs"
                                     />
                                 </div>
                             </div>
@@ -391,6 +402,7 @@ const FatPassingMarks = () => {
                                         onChange={onLabMarksChangeHandler}
                                         min={0}
                                         max={10}
+                                        className="fat-inputs"
                                     />
                                 </div>
                                 <br />
@@ -408,11 +420,14 @@ const FatPassingMarks = () => {
                                         onChange={onLabMarksChangeHandler}
                                         min={0}
                                         max={10}
+                                        className="fat-inputs"
                                     />
                                 </div>
                             </div>
                             <br />
-                            <button type="Submit">Calculate</button>
+                            <button type="Submit" className="calc-btn">
+                                Calculate
+                            </button>
                         </form>
                     </div>
                     <br />

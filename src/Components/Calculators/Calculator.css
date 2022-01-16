@@ -1,9 +1,11 @@
 .Calculator {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .calculator-info {
     border-right: 2px solid #9a9a9a;
+    /* padding-right: 1rem; */
     flex: 1;
 }
 
@@ -13,7 +15,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     flex: 1;
 }
 
@@ -23,12 +24,26 @@
     flex: 1;
 }
 
-.count-form {
-    align-self: flex-start;
-}
-
 form {
     font-family: 'Nunito Sans', sans-serif;
+}
+
+.fat-marks-calculator {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.subject-container {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.subject-select-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 input,
@@ -46,17 +61,19 @@ select {
 
 select,
 input {
-    margin-top: 10px;
-    margin-right: 30px;
+    /* margin-top: 10px;
+    margin-right: 30px; */
+    margin: 0 1em;
     outline: none;
     font-family: 'Nunito Sans', sans-serif;
 }
 
-form button {
+
+
+.calc-btn {
     color: white;
-    background: #497fc0;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
+    background: #2FCFB3;
+    border-radius: 10px;
     border: none;
     width: 150px;
     height: 50px;
@@ -67,11 +84,6 @@ form button {
     font-size: 20px;
     text-align: center;
     font-family: 'Nunito Sans', sans-serif;
-}
-
-.subject-select-container {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .subject-label,
@@ -119,8 +131,18 @@ label {
     width: 50%;
 }
 
+.count-input {
+    margin-left: 0;
+    margin-top: 0.5rem;
+}
+
 .meme-image img {
     width: 100%;
+}
+
+.fat-inputs {
+    margin: 0;
+    margin-top: 10px;
 }
 
 .answer {
