@@ -1,33 +1,42 @@
-/* nav {
-    margin: 0 8%;
+nav {
+  margin: 0 8%;
 }
 
-li {
-    padding-left: 50px;
-}
+/* li {
+  padding-left: 50px;
+} */
 
 .navbar {
-    padding: 1rem 0;
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  /* position:fixed; */
+  /* background-color: #ffffff; */
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  /* width: 100%; */
+  /* padding: 20px 30px; */
 }
-
+.nav-item {
+  font-size: 1.5rem;
+}
+.dropdown-item {
+  margin: 0;
+}
 .nav-link {
-    font-size: 16px !important;
-    font-weight: 500 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
 }
 
-.container-fluid {
-    background: #ffffff;
-    box-shadow: 2px 4px 26px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    height: 60px;
-    padding: 0 4rem;
-}
+/* .container-fluid {
+  background: #ffffff;
+  box-shadow: 2px 4px 26px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: 60px;
+  padding: 0 4rem;
+} */
 
 .nav-item {
-    letter-spacing: 0.05em;
+  letter-spacing: 0.05em;
 }
-
-/* .navbar-brand {
-  background: url(./vitrendz.svg);
-  width: 50px;
-} */ 
