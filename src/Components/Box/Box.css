@@ -11,6 +11,12 @@
     font-family: 'Nunito Sans', sans-serif;
 }
 
+@media only screen and (max-width: 900px) {
+    .Main {
+        padding: 2rem 1rem;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .Main {
         padding: 4rem 2rem;

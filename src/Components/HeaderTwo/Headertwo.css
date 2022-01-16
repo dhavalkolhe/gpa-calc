@@ -2,19 +2,20 @@
     position: relative;
     width: 100%;
     position: relative;
+    border: 2px solid transparent;
 }
 
 .header-main::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 2rem;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
     height: 200%;
     background-image: url('../../assets/header-svg.svg');
     background-repeat: no-repeat;
-    background-position: top 25% center;
+    background-position: top center;
     z-index: -10;
     border-radius: 20px;
 }
@@ -26,10 +27,21 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 2rem;
+    position: relative;
+    /* border: 2px solid green; */
 }
 
 @media only screen and (max-width: 1450px) {
     .header-main::before {
         background-position: left 75% top 20%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .header-main::before {
+        background-position: top center;
+        background-image: url('../../assets/header-bg-long.svg');
+        height: 150%;
+        /* border: 2px solid brown; */
     }
 }

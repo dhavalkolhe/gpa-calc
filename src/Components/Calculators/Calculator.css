@@ -69,11 +69,9 @@ input {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-
-
 .calc-btn {
     color: white;
-    background: #2FCFB3;
+    background: #2fcfb3;
     border-radius: 10px;
     border: none;
     width: 150px;
@@ -154,28 +152,60 @@ label {
     .Calculator {
         flex-direction: column;
     }
+    .calculator-main {
+        padding: 0;
+    }
 }
 @media only screen and (max-width: 992px) {
     .meme-image {
         width: 90%;
     }
 }
-@media only screen and (max-width: 744px) {
-    .subject-container{
-        flex-direction: column;
+@media only screen and (max-width: 900px) {
+    .calculator-info {
+        text-align: center;
+        font-size: 1.5rem;
     }
-    .subject-select-container{
+    .calculator-main {
+        align-items: center;
+        text-align: center;
+    }
+    .steps span {
+        font-size: 1.5rem;
+    }
+    .steps {
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 680px) {
+    .calculator-main {
+        align-items: stretch;
+    }
+    .subject-container {
+        flex-direction: column;
+        margin: 0.75rem 0;
+    }
+    .subject-label {
+        margin: 0;
+    }
+    .subject-select-container {
         flex-direction: column;
         min-height: 5rem;
         justify-content: space-between;
+        width: 60%;
     }
-    input,select{
+    input,
+    select {
         margin: 0;
     }
-    .calculator-main{
-        padding-left: 0;
+    .subject-select-container input,
+    .subject-select-container select {
+        width: 100%;
+    }
+    .calculator-main {
+        padding: 0;
+        height: fit-content;
         justify-content: center;
-        align-items: center;
+        /* align-items: center; */
     }
 }
-

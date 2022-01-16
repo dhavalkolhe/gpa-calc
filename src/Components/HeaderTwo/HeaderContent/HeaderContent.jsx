@@ -4,7 +4,7 @@ import illus from "../../../assets/illus.png";
 const HeaderContent = () => {
   return (
     <div className="header-content">
-      <div>
+      <div className="header-text-content">
         <h1 className="header-content__heading">
           gpa <span>calculator</span>
         </h1>
