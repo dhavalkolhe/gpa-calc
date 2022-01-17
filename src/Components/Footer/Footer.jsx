@@ -1,5 +1,4 @@
 import React from "react";
-import footerBg from "../../assets/footer-svg.svg";
 import "./Footer.css";
 
 function Footer() {

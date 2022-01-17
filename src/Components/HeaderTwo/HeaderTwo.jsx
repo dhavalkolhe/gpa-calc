@@ -1,6 +1,5 @@
 import Navbar from '../Navbar/Navbar';
 import HeaderContent from './HeaderContent/HeaderContent';
-import headerSvg from '../../assets/header-svg.svg';
 import './Headertwo.css';
 
 const HeaderTwo = () => {
