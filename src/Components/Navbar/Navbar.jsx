@@ -49,13 +49,20 @@ function Navbar() {
                   <a
                     className="dropdown-item"
                     href="https://ffcs.vitrendz.com/"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     FFCS Planner
                   </a>
                 </li>
 
                 <li>
-                  <a className="dropdown-item" href="/">
+                  <a
+                    className="dropdown-item"
+                    href="https://resources.vitrendz.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Resources
                   </a>
                 </li>
@@ -64,6 +71,8 @@ function Navbar() {
                   <a
                     className="dropdown-item"
                     href="https://faculty.vitrendz.com/"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     Faculty Review
                   </a>
@@ -73,6 +82,8 @@ function Navbar() {
                   <a
                     className="dropdown-item"
                     href="https://labs.vitrendz.com/"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     Lab Records
                   </a>

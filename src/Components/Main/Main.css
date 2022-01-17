@@ -6,17 +6,12 @@
   text-transform: capitalize !important;
   font-family: "Nunito Sans", sans-serif !important;
   display: inline-block !important;
+  
+}
+.feature-label.Mui-selected{
+  color: white !important;
 }
 
-.css-1ttpded-MuiButtonBase-root-MuiTab-root.Mui-selected,
-.css-1ow8rat-MuiButtonBase-root-MuiTab-root.Mui-selected,
-.css-1ow8rat-MuiButtonBase-root-MuiTab-root.Mui-selected {
-  color: #fff !important;
-}
-
-.css-oohepw-MuiButtonBase-root-MuiTab-root.Mui-selected {
-  color: #fff !important;
-}
 
 @media only screen and (max-width: 600px) {
   .tab-panel{
@@ -25,4 +20,12 @@
   .css-8atqhb{
     width: 100% !important;
   }
+}
+@media only screen and (max-width: 500px){
+    .feature-label{
+      font-size: 1rem !important;
+    }
+    .tab-panel{
+      /* width: 80%; */
+    }
 }

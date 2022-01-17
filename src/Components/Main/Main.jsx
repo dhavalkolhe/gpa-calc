@@ -50,7 +50,7 @@ export default function BasicTabs() {
     };
 
     return (
-        <Box sx={{ minWidth: '20rem' }}>
+        <Box sx={{ minWidth: '10rem' }}>
             <Box
                 sx={{
                     borderBottom: 1,
@@ -91,7 +91,7 @@ export default function BasicTabs() {
                             color: '#000',
                             fontWeight: 'bold',
                             alignSelf:'center',
-                            minWidth:'15rem'
+                            minWidth:'10rem'
                         }}
                     />
                     <Tab
@@ -106,7 +106,7 @@ export default function BasicTabs() {
                             color: '#000',
                             fontWeight: 'bold',
                             alignSelf:'center',
-                            minWidth:'15rem'
+                            minWidth:'10rem'
                         }}
                     />
                     <Tab
@@ -121,7 +121,7 @@ export default function BasicTabs() {
                             color: '#000',
                             fontWeight: 'bold',
                             alignSelf:'center',
-                            minWidth:'15rem'
+                            minWidth:'10rem'
                         }}
                     />
                 </Tabs>

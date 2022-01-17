@@ -97,6 +97,9 @@
     text-align: center;
 }
 
+.footer__content-contact > a:visited{
+    color: white !important;
+}
 @media only screen and (max-width: 900px) {
     
 }
