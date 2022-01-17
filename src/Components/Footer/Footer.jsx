@@ -72,8 +72,13 @@ function Footer() {
                 </div>
             </footer>
             <div className="footer__content-copyright">
-                © 2022 All Rights Reserved{' '}
+                © 2022 All Rights Reserved
             </div>
+            <br />
+            <div className="footer__content-copyright">
+                Made with 💚 by VITrendz
+            </div>
+
         </div>
     );
 }
