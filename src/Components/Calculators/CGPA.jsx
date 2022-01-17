@@ -154,7 +154,7 @@ const Cgpa = () => {
                     <div>
                         <h1 className="answer">
                             Cannot calculate CGPA for more than 10
-                            semesters....majak bana rakha h
+                            semesters...
                         </h1>
                         <div className="meme-image">
                             <img src={disappointMeme} alt="img" />

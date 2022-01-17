@@ -11,7 +11,13 @@
 .feature-label.Mui-selected{
   color: white !important;
 }
-
+.mobile-span{
+  display: none;
+  text-align: center;
+  margin: 1rem;
+  margin-top: 0;
+  font-weight: 800;
+}
 
 @media only screen and (max-width: 600px) {
   .tab-panel{
@@ -19,6 +25,9 @@
   }
   .css-8atqhb{
     width: 100% !important;
+  }
+  .mobile-span{
+    display: block;
   }
 }
 @media only screen and (max-width: 500px){

@@ -129,7 +129,6 @@ label {
 
 .meme-image {
     margin: 2rem auto;
-    width: 50%;
 }
 
 .count-input {
@@ -150,6 +149,13 @@ label {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+.calc-output{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+}
 @media only screen and (max-width: 1280px) {
     .Calculator {
         flex-direction: column;
@@ -160,7 +166,7 @@ label {
 }
 @media only screen and (max-width: 992px) {
     .meme-image {
-        width: 90%;
+        width: 75%;
     }
     
 }
@@ -205,6 +211,9 @@ label {
     input,
     select {
         margin: 0;
+    }
+    select{
+        margin-bottom: 1rem;
     }
     .subject-select-container input,
     .subject-select-container select {
