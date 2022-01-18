@@ -191,7 +191,7 @@ const FatPassingMarks = () => {
             </select>
             {subjectComponent === 'Theory' ? (
                 <div className="Calculator">
-                    <div className="calculator-info">
+                    <div className="calculator-info fat-pass">
                         <form onSubmit={onTheoryMarksFormSubmitHandler}>
                             <br />
                             <div className="cat-marks-container">

@@ -116,8 +116,8 @@ const Calculator = () => {
                         className="count-input"
                     />
                 </form>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <div>{list1}</div>
+                <form onSubmit={handleSubmit(onSubmit)} className="list-form">
+                    <div className="list-container">{list1}</div>
                     <br />
                     <br />
                     {sub > 0 && (

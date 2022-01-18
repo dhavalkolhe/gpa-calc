@@ -111,8 +111,8 @@ const Cgpa = () => {
               className="count-input"
             />
           </form>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div>{semesterList}</div>
+          <form onSubmit={handleSubmit(onSubmit)} className="list-form">
+            <div className="list-container">{semesterList}</div>
             <br />
             {semesters > 0 && (
               <button type="Submit" className="calc-btn">

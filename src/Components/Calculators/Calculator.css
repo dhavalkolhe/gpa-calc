@@ -180,15 +180,35 @@ label {
     .lab-inputs {
         font-size: 1.25rem;
     }
+    .form-input input {
+        width: 90%;
+    }
+    .cat-marks-container .form-input {
+        flex: 1;
+    }
+    input::placeholder {
+        text-align: center;
+    }
 }
 @media only screen and (max-width: 900px) {
     .calculator-info {
+        text-align: left;
+        font-size: 1.5rem;
+    }
+    .calculator-info.fat-pass {
         text-align: center;
         font-size: 1.5rem;
+    }
+    .cat-marks-container input {
+        width: 90%;
     }
     .calculator-main {
         align-items: center;
         text-align: center;
+        width: 100%;
+    }
+    .list-container input {
+        width: 60%;
     }
     .steps span {
         font-size: 1.5rem;
@@ -251,7 +271,9 @@ label {
     .lab-inputs {
         font-size: 1rem;
     }
-    
+    .list-container input {
+        width: 80%;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -260,5 +282,8 @@ label {
     }
     .cat-marks-container {
         gap: 0;
+    }
+    .list-container input {
+        width: 100%;
     }
 }

@@ -6,8 +6,8 @@
 }
 .about__heading-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding: 0.5rem 0;
     font-family: 'Nunito Sans', sans-serif;
 }
@@ -15,6 +15,7 @@
     font-size: 2.25rem;
     font-weight: 600;
     color: var(--primary-color);
+    margin: 0;
 }
 
 .about__link {
@@ -40,8 +41,17 @@
     font-size: 1.25rem;
     color: #2d334a;
     padding: 0.5rem 0;
-    /* text-align: justify; */
+    text-align: justify;
 }
 .about__link:visited{
     color: white;
+}
+
+@media only screen and (max-width: 410px) {
+    .about__heading {
+        font-size: 1.75rem;
+    }
+    .about__text {
+        font-size: 1rem;
+    }
 }
