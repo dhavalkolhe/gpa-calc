@@ -154,7 +154,7 @@ label {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-.calc-output{
+.calc-output {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,17 +167,19 @@ label {
     }
     .calculator-main {
         padding: 0;
-    }   
+    }
 }
 @media only screen and (max-width: 992px) {
     .meme-image {
         width: 75%;
     }
     .cat-marks-container label,
-    .internal-marks-label {
+    .lab-marks-inputs-container label,
+    .internal-marks-label,
+    .fat-inputs,
+    .lab-inputs {
         font-size: 1.25rem;
     }
-    
 }
 @media only screen and (max-width: 900px) {
     .calculator-info {
@@ -200,7 +202,7 @@ label {
         gap: 0;
         margin-bottom: 3rem;
     }
-    .fat-marks-calculator{
+    .fat-marks-calculator {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -227,7 +229,7 @@ label {
     select {
         margin: 0;
     }
-    select{
+    select {
         margin-bottom: 1rem;
     }
     .subject-select-container input,
@@ -238,20 +240,21 @@ label {
         padding: 0;
         height: fit-content;
         justify-content: center;
-        /* align-items: center; */
     }
-    .cgpa-total-input{
+    .cgpa-total-input {
         margin-bottom: 1rem;
     }
     .cat-marks-container label,
-    .internal-marks-label {
+    .lab-marks-inputs-container label,
+    .internal-marks-label,
+    .fat-inputs,
+    .lab-inputs {
         font-size: 1rem;
     }
-    
 }
 
-@media only screen and (max-width: 500px){
-    .cat-marks-container{
+@media only screen and (max-width: 500px) {
+    .cat-marks-container {
         flex-direction: column;
     }
 }
