@@ -5,13 +5,12 @@ function Footer() {
   const year = new Date().getFullYear();
   return (
       <div className="footer-main">
-          {/* <img className="footer-svg" src={footerBg} alt="footer-bg" /> */}
           <footer className="footer">
               <div className="footer__heading-container">
                   <h1 className="footer-heading">GPA Calculator</h1>
               </div>
-              <div className="footer__content-container">
-                  <div className="footer__content-about">
+              <div className="footer__content-container row">
+                  <div className="footer__content-about col-md-3">
                       <h3 className="footer__content-about-heading footer__subheading">
                           About GPA Calculator
                       </h3>
@@ -36,7 +35,7 @@ function Footer() {
                           </li>
                       </ul>
                   </div>
-                  <div className="footer__content-quick">
+                  <div className="footer__content-quick col-md-3">
                       <h3 className="footer__content-quick-heading footer__subheading">
                           Quick Links
                       </h3>
@@ -44,12 +43,16 @@ function Footer() {
                           <a
                               href="https://groups.vitrendz.com/"
                               className="footer__content-quick-link footer__text"
+                              target='_blank'
+                              rel="noreferrer"
                           >
                               🔗 Community
                           </a>
                           <a
                               href="/"
                               className="footer__content-quick-link footer__text"
+                              target='_blank'
+                              rel="noreferrer"
                           >
                               🔗 Services
                           </a>
@@ -61,7 +64,7 @@ function Footer() {
                           </a>
                       </div>
                   </div>
-                  <div className="footer__content-contact-container">
+                  <div className="footer__content-contact-container col-md-3">
                       <h3 className="footer__content-contact-heading footer__subheading">
                           Contact us
                       </h3>

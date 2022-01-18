@@ -101,7 +101,7 @@ const Calculator = () => {
             <div className="calculator-info">
                 <p className="steps">
                     <br />
-                    <span>How to use GPA calculator</span> <br />
+                    <span>How to use GPA calculator ?</span> <br />
                     🔢 Enter number of courses <br />
                     🧐 Put grades obtained and credits of each course <br />
                     💥 Voila! Your GPA for this semester <br /> <br />
@@ -148,7 +148,7 @@ const Calculator = () => {
         <div className="calculator-info">
           <p className="steps">
             <br />
-            <span>How to use GPA calculator</span> <br />
+            <span>How to use GPA calculator ?</span> <br />
             🔢 Enter number of courses <br />
             🧐 Put grades obtained and credits of each course <br />
             💥 Voila! Your GPA for this semester <br /> <br />

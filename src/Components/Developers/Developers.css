@@ -1,0 +1,43 @@
+.developers {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    max-width: 1400px;
+    padding: 1.5rem 3rem;
+}
+
+.developers_heading {
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 2.25rem;
+}
+
+.developers_info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.developer-img {
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+}
+.role {
+    text-align: center;
+}
+.developer-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: var(--primary-color);
+}
+
+.developer-contact a {
+    color: var(--primary-color);
+}
+
+.developer-card{
+    margin-bottom: 1.5rem;
+}
+

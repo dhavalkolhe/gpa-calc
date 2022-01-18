@@ -1,7 +1,7 @@
 .about {
     max-width: 1400px;
     margin: 0 auto;
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
     padding: 1.5rem 3rem;
 }
 .about__heading-container {
@@ -48,10 +48,15 @@
 }
 
 @media only screen and (max-width: 410px) {
+    .about__heading-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
     .about__heading {
-        font-size: 1.75rem;
+        font-size: 1.55rem;
     }
     .about__text {
         font-size: 1rem;
+        text-align: left;
     }
 }

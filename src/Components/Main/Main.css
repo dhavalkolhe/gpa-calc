@@ -1,4 +1,13 @@
+.dropdown.calc {
+    text-align: center;
+}
 
+.dropdown-toggle.calc {
+    padding: 0.75rem 2rem;
+    font-size: 1.25rem;
+    background-color: #2FCFB3 !important;
+    border-radius: 3rem !important;
+}
 
 .feature-label {
   letter-spacing: 1.5px !important;

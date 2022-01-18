@@ -44,6 +44,20 @@ function a11yProps(index) {
 
 export default function BasicTabs() {
     const [value, setValue] = React.useState(0);
+    const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+    const [dropdownLabel, setDropdownLabel] = React.useState('Calculators');
+
+    const dropdownClickHandler = (event) => {
+        setDropdownLabel(() => event.target.innerText);
+        setValue(Number(event.target.id));
+    };
+
+    React.useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(() => window.innerWidth);
+        };
+        window.addEventListener('resize', handleResize);
+    });
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -51,81 +65,121 @@ export default function BasicTabs() {
 
     return (
         <Box sx={{ minWidth: '10rem' }}>
-            <Box
-                sx={{
-                    borderBottom: 1,
-                    borderColor: 'divider',
-                    borderRadius: '2rem',
-                }}
-            >
-                <Tabs
-                    value={value}
-                    onChange={handleChange}
-                    aria-label="scrollable auto tabs example"
-                    // className="tabs-panel"
-                    variant="scrollable"
-                    scrollButtons="auto"
-                    TabIndicatorProps={{
-                        style: {
-                            backgroundColor: '#2FCFB3',
-                            height: '100%',
-                            borderRadius: '2rem',
-                            zIndex: '1',
-                        },
-                    }}
+            {windowWidth > 600 ? (
+                <Box
                     sx={{
-                        background: 'rgba(47,207,179,0.3)',
-                        textAlign: 'center',
-                        fontSize:'1rem',
+                        borderBottom: 1,
+                        borderColor: 'divider',
                         borderRadius: '2rem',
                     }}
                 >
-                    <Tab
-                        className="feature-label"
-                        label="Calculate GPA"
-                        {...a11yProps(0)}
-                        sx={{
-                            borderRadius: '2rem',
-                            flex: '1',
-                            zIndex: '10',
-                            color: '#000',
-                            fontWeight: 'bold',
-                            alignSelf:'center',
-                            minWidth:'10rem'
+                    <Tabs
+                        value={value}
+                        onChange={handleChange}
+                        aria-label="scrollable auto tabs example"
+                        variant="scrollable"
+                        scrollButtons="auto"
+                        TabIndicatorProps={{
+                            style: {
+                                backgroundColor: '#2FCFB3',
+                                height: '100%',
+                                borderRadius: '2rem',
+                                zIndex: '1',
+                            },
                         }}
-                    />
-                    <Tab
-                        className="feature-label"
-                        label="Calculate CGPA"
-                        {...a11yProps(1)}
                         sx={{
-                            marginLeft: 'auto',
+                            background: 'rgba(47,207,179,0.3)',
+                            textAlign: 'center',
+                            fontSize: '1rem',
                             borderRadius: '2rem',
-                            flex: '1',
-                            zIndex: '10',
-                            color: '#000',
-                            fontWeight: 'bold',
-                            alignSelf:'center',
-                            minWidth:'10rem'
                         }}
-                    />
-                    <Tab
-                        className="feature-label"
-                        label="FAT Passing Marks"
-                        {...a11yProps(1)}
-                        sx={{
-                            marginLeft: 'auto',
-                            borderRadius: '2rem',
-                            flex: '1',
-                            zIndex: '10',
-                            color: '#000',
-                            fontWeight: 'bold',
-                            alignSelf:'center',
-                            minWidth:'10rem'
-                        }}
-                    />
-                </Tabs>
-            </Box>
+                    >
+                        <Tab
+                            className="feature-label"
+                            label="Calculate GPA"
+                            {...a11yProps(0)}
+                            sx={{
+                                borderRadius: '2rem',
+                                flex: '1',
+                                zIndex: '10',
+                                color: '#000',
+                                fontWeight: 'bold',
+                                alignSelf: 'center',
+                                minWidth: '10rem',
+                            }}
+                        />
+                        <Tab
+                            className="feature-label"
+                            label="Calculate CGPA"
+                            {...a11yProps(1)}
+                            sx={{
+                                marginLeft: 'auto',
+                                borderRadius: '2rem',
+                                flex: '1',
+                                zIndex: '10',
+                                color: '#000',
+                                fontWeight: 'bold',
+                                alignSelf: 'center',
+                                minWidth: '10rem',
+                            }}
+                        />
+                        <Tab
+                            className="feature-label"
+                            label="FAT Passing Marks"
+                            {...a11yProps(1)}
+                            sx={{
+                                marginLeft: 'auto',
+                                borderRadius: '2rem',
+                                flex: '1',
+                                zIndex: '10',
+                                color: '#000',
+                                fontWeight: 'bold',
+                                alignSelf: 'center',
+                                minWidth: '10rem',
+                            }}
+                        />
+                    </Tabs>
+                </Box>
+            ) : (
+                <div class="dropdown calc">
+                    <button
+                        class="btn btn-secondary dropdown-toggle calc"
+                        type="button"
+                        id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        {dropdownLabel}
+                    </button>
+                    <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton1"
+                    >
+                        <li
+                            onClick={dropdownClickHandler}
+                            className="dropdown-item"
+                            id="0"
+                        >
+                            Calculate GPA
+                        </li>
+                        <li
+                            onClick={dropdownClickHandler}
+                            className="dropdown-item"
+                            id="1"
+                        >
+                            Calculate CGPA
+                        </li>
+                        <li
+                            onClick={dropdownClickHandler}
+                            className="dropdown-item"
+                            id="2"
+                        >
+                            FAT Passing Marks
+                        </li>
+                    </ul>
+                </div>
+            )}
+
             <TabPanel value={value} index={0} className="tab-panel">
                 <Calculator />
             </TabPanel>

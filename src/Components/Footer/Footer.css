@@ -34,6 +34,8 @@
     line-height: 1.5;
 }
 
+
+
 .footer-main {
     position: relative;
     margin-bottom: 3rem;
@@ -71,6 +73,10 @@
     flex-wrap: wrap;
     padding: 1rem 0;
 }
+.footer__content-links-container {
+    width: fit-content;
+    margin: 0 auto;
+}
 
 .footer__content-about {
     flex: 1.25;
@@ -81,6 +87,7 @@
 .footer__content-contact-container {
     flex: 1;
     text-align: center;
+    align-items: center;
 }
 
 .footer__content-copyright{
@@ -90,6 +97,10 @@
 .footer__content-contact > a:visited{
     color: white !important;
 }
+.footer__content-quick-link{
+    text-align: left;
+}
+
 @media only screen and (max-width: 750px) {
     .footer__content-container {
         flex-direction: column;
@@ -102,6 +113,10 @@
         text-align: left;
         margin-bottom: 1rem;
     }
+    .footer__content-links-container {
+    width: fit-content;
+    margin: 0;
+}
 }
 
 @media only screen and (max-width: 600px) {
@@ -118,5 +133,4 @@
         width: 90%;
         justify-content: center;
     }
-    
 }

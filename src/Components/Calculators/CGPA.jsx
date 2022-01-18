@@ -95,7 +95,7 @@ const Cgpa = () => {
         <div className="calculator-info">
           <p className="steps">
             <br />
-            <span>How to Calculate CGPA</span>
+            <span>How to Calculate CGPA ?</span>
             <br />
             🎰 Enter number of semesters <br />
             📌 Put grades obtained and credits of each course <br />
@@ -143,7 +143,7 @@ const Cgpa = () => {
         <div className="calculator-info">
           <p className="steps">
             <br />
-            <span>How to Calculate CGPA</span>
+            <span>How to Calculate CGPA ?</span>
             <br />
             🎰 Enter number of semesters <br />
             📌 Put grades obtained and credits of each course <br />
