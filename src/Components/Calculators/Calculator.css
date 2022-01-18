@@ -251,10 +251,14 @@ label {
     .lab-inputs {
         font-size: 1rem;
     }
+    
 }
 
 @media only screen and (max-width: 500px) {
     .cat-marks-container {
         flex-direction: column;
+    }
+    .cat-marks-container {
+        gap: 0;
     }
 }
