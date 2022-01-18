@@ -125,8 +125,7 @@ const Calculator = () => {
                     </p>
                     <div>
                         <h1 className="answer">
-                            Cannot enter more than 10 subjects....majak bana
-                            rakha h
+                            Cannot enter more than 10 subjects...
                         </h1>
                         <div className="meme-image">
                             <img src={disappointMeme} alt="img" />

@@ -77,6 +77,8 @@ const Cgpa = () => {
                         placeholder="Total Credits"
                         min={16}
                         max={27}
+                        className='cgpa-total-input'
+                        // style={{marginBottom:"1rem"}}
                     />
                     <input
                         type="number"

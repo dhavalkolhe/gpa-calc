@@ -1,6 +1,7 @@
 .Calculator {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .calculator-info {
@@ -30,7 +31,8 @@ form {
 }
 
 .fat-marks-calculator {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Nunito Sans', sans-serif !important;
+    /* border: 1px solid red; */
 }
 
 .subject-container {
@@ -159,12 +161,13 @@ label {
     }
     .calculator-main {
         padding: 0;
-    }
+    }   
 }
 @media only screen and (max-width: 992px) {
     .meme-image {
         width: 90%;
     }
+    
 }
 @media only screen and (max-width: 900px) {
     .calculator-info {
@@ -187,6 +190,11 @@ label {
         gap: 0;
         margin-bottom: 3rem;
     }
+    .fat-marks-calculator{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 @media only screen and (max-width: 680px) {
     .calculator-main {
@@ -201,7 +209,7 @@ label {
     }
     .subject-select-container {
         flex-direction: column;
-        min-height: 5rem;
+        min-height: 3rem;
         justify-content: space-between;
         width: 60%;
     }
@@ -218,5 +226,15 @@ label {
         height: fit-content;
         justify-content: center;
         /* align-items: center; */
+    }
+    .cgpa-total-input{
+        margin-bottom: 1rem;
+    }
+    
+}
+
+@media only screen and (max-width: 500px){
+    .cat-marks-container{
+        flex-direction: column;
     }
 }

@@ -9,7 +9,7 @@ const HeaderContent = () => {
           gpa <span>calculator</span>
         </h1>
         <p className="header-content__text">
-          Calculate your GPA, cummulative GPA, find out the marks required to
+          Calculate your GPA, cumulative GPA, find out the marks required to
           pass your theory/lab component
         </p>
       </div>
