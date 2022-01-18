@@ -173,6 +173,10 @@ label {
     .meme-image {
         width: 75%;
     }
+    .cat-marks-container label,
+    .internal-marks-label {
+        font-size: 1.25rem;
+    }
     
 }
 @media only screen and (max-width: 900px) {
@@ -238,6 +242,10 @@ label {
     }
     .cgpa-total-input{
         margin-bottom: 1rem;
+    }
+    .cat-marks-container label,
+    .internal-marks-label {
+        font-size: 1rem;
     }
     
 }
