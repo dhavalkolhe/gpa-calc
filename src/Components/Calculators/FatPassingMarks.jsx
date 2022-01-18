@@ -328,7 +328,7 @@ const FatPassingMarks = () => {
                                         onChange={onLabMarksChangeHandler}
                                         min={0}
                                         max={10}
-                                        className="fat-inputs"
+                                        className="lab-inputs"
                                     />
                                 </div>
                                 <br />
@@ -346,7 +346,7 @@ const FatPassingMarks = () => {
                                         onChange={onLabMarksChangeHandler}
                                         min={0}
                                         max={10}
-                                        className="fat-inputs"
+                                        className="lab-inputs"
                                     />
                                 </div>
                             </div>
@@ -365,7 +365,7 @@ const FatPassingMarks = () => {
                                         onChange={onLabMarksChangeHandler}
                                         min={0}
                                         max={10}
-                                        className="fat-inputs"
+                                        className="lab-inputs"
                                     />
                                 </div>
                                 <br />
@@ -383,7 +383,7 @@ const FatPassingMarks = () => {
                                         onChange={onLabMarksChangeHandler}
                                         min={0}
                                         max={10}
-                                        className="fat-inputs"
+                                        className="lab-inputs"
                                     />
                                 </div>
                             </div>
@@ -402,7 +402,7 @@ const FatPassingMarks = () => {
                                         onChange={onLabMarksChangeHandler}
                                         min={0}
                                         max={10}
-                                        className="fat-inputs"
+                                        className="lab-inputs"
                                     />
                                 </div>
                                 <br />
@@ -420,7 +420,7 @@ const FatPassingMarks = () => {
                                         onChange={onLabMarksChangeHandler}
                                         min={0}
                                         max={10}
-                                        className="fat-inputs"
+                                        className="lab-inputs"
                                     />
                                 </div>
                             </div>

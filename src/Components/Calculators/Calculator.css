@@ -144,6 +144,11 @@ label {
     margin-top: 10px;
 }
 
+.lab-inputs {
+    margin: 0;
+    margin-top: 10px;
+}
+
 .answer {
     font-family: 'Nunito Sans', sans-serif;
 }
@@ -175,6 +180,12 @@ label {
     }
     .steps {
         font-size: 1rem;
+    }
+    .lab-marks-inputs-container {
+        flex-direction: column;
+        /* border: 2px solid red; */
+        gap: 0;
+        margin-bottom: 3rem;
     }
 }
 @media only screen and (max-width: 680px) {
