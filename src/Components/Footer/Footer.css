@@ -100,6 +100,7 @@
     .footer__content-contact-container {
         width: 100%;
         text-align: left;
+        margin-bottom: 1rem;
     }
 }
 

@@ -207,7 +207,8 @@ label {
         text-align: center;
         width: 100%;
     }
-    .list-container input {
+    .list-container input,
+    .list-container select {
         width: 60%;
     }
     .steps span {
@@ -218,7 +219,6 @@ label {
     }
     .lab-marks-inputs-container {
         flex-direction: column;
-        /* border: 2px solid red; */
         gap: 0;
         margin-bottom: 3rem;
     }
@@ -277,13 +277,17 @@ label {
 }
 
 @media only screen and (max-width: 500px) {
+    .subject-select-container {
+        width: 90%;
+    }
     .cat-marks-container {
         flex-direction: column;
     }
     .cat-marks-container {
         gap: 0;
     }
-    .list-container input {
+    .list-container input,
+    .list-container select {
         width: 100%;
     }
 }
