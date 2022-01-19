@@ -127,7 +127,7 @@ const Cgpa = () => {
           {total !== 0 && (
             <div>
               <h1 className="answer">
-                {total.length > 5 ? `${total}` : `GPA: ${total}`}
+                {total.length > 5 ? `${total}` : `CGPA: ${total}`}
               </h1>
               <div className="meme-image">
                 <img src={memeImage} alt="img" />
