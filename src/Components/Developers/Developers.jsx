@@ -30,6 +30,13 @@ const Developers = () => {
                         >
                             <i className="fab fa-github fa-2x"></i>
                         </a>
+                        <a
+                            href="https://www.instagram.com/agarwal__abhii/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <i className="fab fa-instagram fa-2x"></i>
+                        </a>
                     </p>
                 </div>
                 <div className="developer-card col-xl-3 col-sm-6">
@@ -52,6 +59,13 @@ const Developers = () => {
                             rel="noreferrer"
                         >
                             <i className="fab fa-github fa-2x"></i>
+                        </a>
+                        <a
+                            href="https://www.instagram.com/rohan_g1572/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <i className="fab fa-instagram fa-2x"></i>
                         </a>
                     </p>
                 </div>
@@ -76,6 +90,13 @@ const Developers = () => {
                         >
                             <i className="fab fa-github fa-2x"></i>
                         </a>
+                        <a
+                            href="https://www.instagram.com/monalisamaiti/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <i className="fab fa-instagram fa-2x"></i>
+                        </a>
                     </p>
                 </div>
                 <div className="developer-card col-xl-3 col-sm-6">
@@ -98,6 +119,13 @@ const Developers = () => {
                             rel="noreferrer"
                         >
                             <i className="fab fa-github fa-2x"></i>
+                        </a>
+                        <a
+                            href="https://www.instagram.com/iharsh_agarwal/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <i className="fab fa-instagram fa-2x"></i>
                         </a>
                     </p>
                 </div>
