@@ -12,7 +12,7 @@ function App() {
             <HeaderTwo />
             <Box />
             <About />
-            <Developers />
+            {/* <Developers /> */}
             <Footer />
         </div>
     );
