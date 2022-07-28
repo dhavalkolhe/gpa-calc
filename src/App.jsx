@@ -4,7 +4,6 @@ import Box from "./Components/Box/Box";
 import Footer from "./Components/Footer/Footer";
 import HeaderTwo from "./Components/HeaderTwo/HeaderTwo";
 import "./App.css";
-import Developers from "./Components/Developers/Developers";
 import AdSense from 'react-adsense';
 
 function App() {
